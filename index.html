@@ -64,7 +64,7 @@
 			overflow-y: scroll;
 			overflow-x: auto;
 			/*flex: 1 1 50%; */
-			flex: 0 0 auto;
+			flex: 1 1 30em;
 			padding-right: 1em;
 		}
 		#SCRIPT.fold {
@@ -112,11 +112,12 @@ d3.select("#JSONDIV").append("ul").attr("id","BACUL").selectAll("li").data(CHARB
 			// d3.selectAll("li[data-key=Moves] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); });
 			d3.selectAll("li[data-key=Moves] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
 			d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
-			d3.selectAll("li[data-key=Moves] > ul > li.jsondiffpatch-node").insert("button", "ul").text("SCRIPT").on("click", UCSCRIPT);
-			d3.selectAll("li[data-key=Moves] > ul > li.jsondiffpatch-added").insert("button", "div:nth-child(2)").text("SCRIPT").on("click", UCSCRIPT);
+
 			d3.selectAll("li[data-key=HitboxEffects] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=HitboxEffects] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
 			d3.selectAll("li[data-key=HitboxEffects] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
-			function UCSCRIPT(){
+			d3.selectAll("li[data-key=Moves] > ul > li.jsondiffpatch-node").insert("button", "ul").text("SCRIPT").on("click", UCBACSCRIPT);
+			d3.selectAll("li[data-key=Moves] > ul > li.jsondiffpatch-added").insert("button", "div:nth-child(2)").text("SCRIPT").on("click", UCBACSCRIPT);
+			function UCBACSCRIPT(){
 				d3.select("#SCRIPT").classed("fold", false);
 				var datakey = d3.select(this.parentNode).attr("data-key");
 				var delta2 = jsondiffpatch.create({ objectHash: function(obj, index) {
@@ -124,6 +125,20 @@ d3.select("#JSONDIV").append("ul").attr("id","BACUL").selectAll("li").data(CHARB
 					return obj.Name || obj.Index || "$$index" + index;
 				}}).diff(bac1.Moves[datakey], bac2.Moves[datakey]);
 				var diff2 = jsondiffpatch.formatters.html.format(delta2,bac1.Moves[datakey]);
+				document.getElementById('SCRIPT').innerHTML = "<span class=\"DIFF1\">" + CHARBAC[i] + "</span> <span class=\"DIFF2\">" + CHARBAC[i+1] + "</span>" + "<br><br><span class=\"DIFF3\">" + datakey + ": </span>";
+				document.getElementById('SCRIPT').innerHTML += "<br><br>" + diff2;
+				// d3.select("#SCRIPT pre").text(JSON.stringify(bac1.Moves[datakey],null,2));
+			}
+			d3.selectAll("li[data-key=HitboxEffects] > ul > li.jsondiffpatch-node").insert("button", "ul").text("EFFECT").on("click", UCBACEFFECT);
+			d3.selectAll("li[data-key=HitboxEffects] > ul > li.jsondiffpatch-added").insert("button", "div:nth-child(2)").text("EFFECT").on("click", UCBACEFFECT);
+			function UCBACEFFECT(){
+				d3.select("#SCRIPT").classed("fold", false);
+				var datakey = d3.select(this.parentNode).attr("data-key");
+				var delta2 = jsondiffpatch.create({ objectHash: function(obj, index) {
+					if (obj == null) return "$$index" + index;
+					return obj.Name || obj.Index || "$$index" + index;
+				}}).diff(bac1.HitboxEffects[datakey], bac2.HitboxEffects[datakey]);
+				var diff2 = jsondiffpatch.formatters.html.format(delta2,bac1.HitboxEffects[datakey]);
 				document.getElementById('SCRIPT').innerHTML = "<span class=\"DIFF1\">" + CHARBAC[i] + "</span> <span class=\"DIFF2\">" + CHARBAC[i+1] + "</span>" + "<br><br><span class=\"DIFF3\">" + datakey + ": </span>";
 				document.getElementById('SCRIPT').innerHTML += "<br><br>" + diff2;
 				// d3.select("#SCRIPT pre").text(JSON.stringify(bac1.Moves[datakey],null,2));
@@ -161,7 +176,46 @@ d3.select("#JSONDIV").append("ul").attr("id","BCMUL").selectAll("li").data(CHARB
 			d3.selectAll("li[data-key=Inputs] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=Inputs] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
 			d3.selectAll("li[data-key=Inputs] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
 			d3.selectAll("li[data-key=Charges] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=Charges] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
-			d3.selectAll("li[data-key=Charges] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
+			d3.selectAll("li[data-key=Charges] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});			
+			d3.selectAll("li[data-key=Moves] > ul > li.jsondiffpatch-node").insert("button", "ul").text("MOVE").on("click", UCBCMMOVE);
+			d3.selectAll("li[data-key=Moves] > ul > li.jsondiffpatch-added").insert("button", "div:nth-child(2)").text("MOVE").on("click", UCBCMMOVE);
+			function UCBCMMOVE(){
+				d3.select("#SCRIPT").classed("fold", false);
+				var datakey = d3.select(this.parentNode).attr("data-key");
+				var delta2 = jsondiffpatch.create({ objectHash: function(obj, index) {
+					if (obj == null) return "$$index" + index;
+					return obj.Name || obj.Index || "$$index" + index;
+				}}).diff(bcm1.Moves[datakey], bcm2.Moves[datakey]);
+				var diff2 = jsondiffpatch.formatters.html.format(delta2,bcm1.Moves[datakey]);
+				document.getElementById('SCRIPT').innerHTML = "<span class=\"DIFF1\">" + CHARBCM[i] + "</span> <span class=\"DIFF2\">" + CHARBCM[i+1] + "</span>" + "<br><br><span class=\"DIFF3\">" + datakey + ": </span>";
+				document.getElementById('SCRIPT').innerHTML += "<br><br>" + diff2;
+			}
+			d3.selectAll("li[data-key=Inputs] > ul > li.jsondiffpatch-node").insert("button", "ul").text("INPUT").on("click", UCBCMINPUT);
+			d3.selectAll("li[data-key=Inputs] > ul > li.jsondiffpatch-added").insert("button", "div:nth-child(2)").text("INPUT").on("click", UCBCMINPUT);
+			function UCBCMINPUT(){
+				d3.select("#SCRIPT").classed("fold", false);
+				var datakey = d3.select(this.parentNode).attr("data-key");
+				var delta2 = jsondiffpatch.create({ objectHash: function(obj, index) {
+					if (obj == null) return "$$index" + index;
+					return obj.Name || obj.Index || "$$index" + index;
+				}}).diff(bcm1.Inputs[datakey], bcm2.Inputs[datakey]);
+				var diff2 = jsondiffpatch.formatters.html.format(delta2,bcm1.Inputs[datakey]);
+				document.getElementById('SCRIPT').innerHTML = "<span class=\"DIFF1\">" + CHARBCM[i] + "</span> <span class=\"DIFF2\">" + CHARBCM[i+1] + "</span>" + "<br><br><span class=\"DIFF3\">" + datakey + ": </span>";
+				document.getElementById('SCRIPT').innerHTML += "<br><br>" + diff2;
+			}
+			d3.selectAll("li[data-key=CancelLists] > ul > li.jsondiffpatch-node").insert("button", "ul").text("CANCEL").on("click", UCBCMCANCEL);
+			d3.selectAll("li[data-key=CancelLists] > ul > li.jsondiffpatch-added").insert("button", "div:nth-child(2)").text("CANCEL").on("click", UCBCMCANCEL);
+			function UCBCMCANCEL(){
+				d3.select("#SCRIPT").classed("fold", false);
+				var datakey = d3.select(this.parentNode).attr("data-key");
+				var delta2 = jsondiffpatch.create({ objectHash: function(obj, index) {
+					if (obj == null) return "$$index" + index;
+					return obj.Name || obj.Index || "$$index" + index;
+				}}).diff(bcm1.CancelLists[datakey], bcm2.CancelLists[datakey]);
+				var diff2 = jsondiffpatch.formatters.html.format(delta2,bcm1.CancelLists[datakey]);
+				document.getElementById('SCRIPT').innerHTML = "<span class=\"DIFF1\">" + CHARBCM[i] + "</span> <span class=\"DIFF2\">" + CHARBCM[i+1] + "</span>" + "<br><br><span class=\"DIFF3\">" + datakey + ": </span>";
+				document.getElementById('SCRIPT').innerHTML += "<br><br>" + diff2;
+			}
 		});
 	});
 });
@@ -225,9 +279,9 @@ function UCBAC(data) {
 		if (effect == null) return;
 		var effects = {};
 		effects["Index"] = effect.Index;
-		effects["Moves"] = hitboxes[effect.Index];
-		if (hitboxesall[effect.Index]) effects["JSON"] = data.JSON + ": " + hitboxesall[effect.Index];
-		// if (hitboxesall[effect.Index]) effects["Scripts"] = hitboxesall[effect.Index];
+		effects["Hitbox"] = hitboxes[effect.Index];
+		// if (hitboxesall[effect.Index]) effects["JSON"] = data.JSON + ": " + hitboxesall[effect.Index];
+		if (hitboxesall[effect.Index]) effects["Hitboxes"] = hitboxesall[effect.Index];
 		effects["HIT_STAND"] = effect["HIT_STAND"];
 		effects["COUNTERHIT_STAND"] = effect["COUNTERHIT_STAND"];
 		effects["GUARD_STAND"] = effect["GUARD_STAND"];

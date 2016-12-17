@@ -1,0 +1,5566 @@
+{
+  "Charges": [
+    {
+      "Index": 0,
+      "ChargeDirection": 4,
+      "ChargeFrames": 40,
+      "Unknown1": 1,
+      "Unknown2": 0,
+      "Unknown3": 0,
+      "Flags": 12,
+      "ChargeIndex": 1,
+      "Unknown4": 0
+    },
+    {
+      "Index": 1,
+      "ChargeDirection": 8,
+      "ChargeFrames": 30,
+      "Unknown1": 1,
+      "Unknown2": 0,
+      "Unknown3": 0,
+      "Flags": 10,
+      "ChargeIndex": 1,
+      "Unknown4": 0
+    },
+    {
+      "Index": 2,
+      "ChargeDirection": 2,
+      "ChargeFrames": 35,
+      "Unknown1": 1,
+      "Unknown2": 0,
+      "Unknown3": 0,
+      "Flags": 12,
+      "ChargeIndex": 1,
+      "Unknown4": 0
+    }
+  ],
+  "Inputs": [
+    {
+      "Index": 0,
+      "Name": "THROW_F, ",
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 2,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 2,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 2,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 2,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 1,
+      "Name": "THROW_B, ",
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 2,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 2,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 2,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 2,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 2,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 3,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 4,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 5,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 6,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down, Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Down, Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 7,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Down, Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Down, Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 8,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 1,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Down, Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Down, Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 4,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 9,
+      "Name": "NIKEN_L, NIKEN_M, NIKEN_H, NIKEN_EX, ",
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down, Forward",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down, Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down, Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 10,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down, Back",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down, Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 8,
+              "Unknown3": 1,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down, Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 11,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down, Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Down, Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 12,
+      "Name": "CA, ",
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 16,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Down, Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 13,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 4096,
+              "Unknown3": 2,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 16,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Down, Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 6,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 14,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 8,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 15,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 368,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 14,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 14,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 14,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 14,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 15,
+              "InputType": 3,
+              "InputDirection": 112,
+              "Unknown1": 16,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 1,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 16,
+      "Name": "BENDA_L, BENDA_M, BENDA_H, BENDA_EX, SOTOJA_L, SOTOJA_M, SOTOJA_H, SOTOJA_EX, ",
+      "InputEntries": [
+        {
+          "InputParts": null
+        },
+        {
+          "InputParts": null
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Charge",
+              "InputDirection": "Neutral",
+              "Unknown1": 0,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": null
+        }
+      ]
+    },
+    {
+      "Index": 17,
+      "Name": "DAEDBALL_L, DAEDBALL_M, DAEDBALL_H, DAEDBALL_EX, ",
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Charge",
+              "InputDirection": "Neutral",
+              "Unknown1": 0,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Charge",
+              "InputDirection": "Neutral",
+              "Unknown1": 0,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Charge",
+              "InputDirection": "Down",
+              "Unknown1": 0,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Up",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Charge",
+              "InputDirection": "Neutral",
+              "Unknown1": 0,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Forward",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Index": 18,
+      "Name": null,
+      "InputEntries": [
+        {
+          "InputParts": null
+        },
+        {
+          "InputParts": null
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Charge",
+              "InputDirection": "Up",
+              "Unknown1": 0,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": "Back",
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": null
+        }
+      ]
+    },
+    {
+      "Index": 19,
+      "Name": "HIGH_JUMP_V, HIGH_JUMP_F, HIGH_JUMP_B, ",
+      "InputEntries": [
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 10,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 10,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 10,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        },
+        {
+          "InputParts": [
+            {
+              "Buffer": 12,
+              "InputType": "Normal",
+              "InputDirection": 4096,
+              "Unknown1": 2,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            },
+            {
+              "Buffer": 10,
+              "InputType": "Normal",
+              "InputDirection": "Down",
+              "Unknown1": 1,
+              "Unknown2": 0,
+              "Unknown3": 0,
+              "Unknown4": 0,
+              "Unknown5": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Moves": [
+    {
+      "Offset": 0,
+      "Index": 0,
+      "Name": "5LP",
+      "Input": 16,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 2304,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 600,
+      "Unknown17": 0,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 1,
+      "Name": "5LK",
+      "Input": 128,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4352,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 603,
+      "Unknown17": 3,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 2,
+      "Name": "5MP",
+      "Input": 32,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 2560,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 601,
+      "Unknown17": 1,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 3,
+      "Name": "5MK",
+      "Input": 256,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4608,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 604,
+      "Unknown17": 4,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 4,
+      "Name": "5HP",
+      "Input": 64,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 3072,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 602,
+      "Unknown17": 2,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 5,
+      "Name": "5HK",
+      "Input": 512,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 5120,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 605,
+      "Unknown17": 5,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 6,
+      "Name": "2LP",
+      "Input": 18,
+      "InputFlags": 4625,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 2304,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 612,
+      "Unknown17": 6,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 7,
+      "Name": "2LP_R",
+      "Input": 18,
+      "InputFlags": 4625,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 2304,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 662,
+      "Unknown17": 6,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 8,
+      "Name": "2LK",
+      "Input": 130,
+      "InputFlags": 4625,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4352,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 615,
+      "Unknown17": 9,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 9,
+      "Name": "2LK_R",
+      "Input": 130,
+      "InputFlags": 4625,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4352,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 663,
+      "Unknown17": 9,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 10,
+      "Name": "2MP",
+      "Input": 34,
+      "InputFlags": 4625,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 2560,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 614,
+      "Unknown17": 7,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 11,
+      "Name": "2MK",
+      "Input": 258,
+      "InputFlags": 4625,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4608,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 616,
+      "Unknown17": 10,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 12,
+      "Name": "2HP",
+      "Input": 66,
+      "InputFlags": 4625,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 3072,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 613,
+      "Unknown17": 8,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 13,
+      "Name": "2HK",
+      "Input": 514,
+      "InputFlags": 4625,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 5120,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 617,
+      "Unknown17": 11,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 14,
+      "Name": "8LP",
+      "Input": 16,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 2304,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 624,
+      "Unknown17": 18,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.5,
+      "Unknown21": 1.35,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 1,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 15,
+      "Name": "8LK",
+      "Input": 128,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4352,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 627,
+      "Unknown17": 21,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.5,
+      "Unknown21": 1.35,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 1,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 16,
+      "Name": "8MP",
+      "Input": 32,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 2560,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 625,
+      "Unknown17": 19,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.5,
+      "Unknown21": 1.35,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 1,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 17,
+      "Name": "8MK",
+      "Input": 256,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4608,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 628,
+      "Unknown17": 22,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.5,
+      "Unknown21": 1.35,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 1,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 18,
+      "Name": "8HP",
+      "Input": 64,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 3072,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 626,
+      "Unknown17": 20,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.5,
+      "Unknown21": 1.35,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 1,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 19,
+      "Name": "8HK",
+      "Input": 512,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 5120,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 629,
+      "Unknown17": 23,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.5,
+      "Unknown21": 1.35,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 1,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 20,
+      "Name": "9HP",
+      "Input": 64,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 3072,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 632,
+      "Unknown17": 14,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.5,
+      "Unknown21": 1.35,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 1,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 21,
+      "Name": "9HK",
+      "Input": 512,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 5120,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 633,
+      "Unknown17": 17,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.5,
+      "Unknown21": 1.35,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 1,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 22,
+      "Name": "NIRENKOU",
+      "Input": 74,
+      "InputFlags": 4626,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 3074,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 670,
+      "Unknown17": 52,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 23,
+      "Name": "SNAKE",
+      "Input": 114,
+      "InputFlags": 4641,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 2,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 675,
+      "Unknown17": 50,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.0,
+      "Unknown21": 0.0,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 24,
+      "Name": "SNAKE_KICK",
+      "Input": 896,
+      "InputFlags": 4112,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4610,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 676,
+      "Unknown17": 51,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 25,
+      "Name": "HIGH_JUMP_V",
+      "Input": 1,
+      "InputFlags": 770,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 0,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 19,
+      "ScriptIndex": 30,
+      "Unknown17": 65535,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.0,
+      "Unknown21": 0.0,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 26,
+      "Name": "HIGH_JUMP_F",
+      "Input": 9,
+      "InputFlags": 770,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 0,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 19,
+      "ScriptIndex": 31,
+      "Unknown17": 65535,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.0,
+      "Unknown21": 0.0,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 27,
+      "Name": "HIGH_JUMP_B",
+      "Input": 5,
+      "InputFlags": 770,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 0,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 19,
+      "ScriptIndex": 32,
+      "Unknown17": 65535,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.0,
+      "Unknown21": 0.0,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 28,
+      "Name": "NIKEN_L",
+      "Input": 128,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 9,
+      "ScriptIndex": 942,
+      "Unknown17": 79,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 29,
+      "Name": "NIKEN_M",
+      "Input": 256,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 9,
+      "ScriptIndex": 943,
+      "Unknown17": 80,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 30,
+      "Name": "NIKEN_H",
+      "Input": 512,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 4,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 9,
+      "ScriptIndex": 944,
+      "Unknown17": 81,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 31,
+      "Name": "NIKEN_EX",
+      "Input": 896,
+      "InputFlags": 20528,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 8,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 300,
+      "MeterUsed": 300,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 9,
+      "ScriptIndex": 945,
+      "Unknown17": 85,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 32,
+      "Name": "BENDA_L",
+      "Input": 128,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 260,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": -5,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 16,
+      "ScriptIndex": 910,
+      "Unknown17": 76,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 33,
+      "Name": "BENDA_M",
+      "Input": 256,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 769,
+      "Unknown6": 516,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": -5,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 16,
+      "ScriptIndex": 911,
+      "Unknown17": 77,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 34,
+      "Name": "BENDA_H",
+      "Input": 512,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 769,
+      "Unknown6": 1028,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": -5,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 16,
+      "ScriptIndex": 912,
+      "Unknown17": 78,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 35,
+      "Name": "BENDA_EX",
+      "Input": 896,
+      "InputFlags": 20528,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 769,
+      "Unknown6": 8,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 300,
+      "MeterUsed": 300,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 16,
+      "ScriptIndex": 914,
+      "Unknown17": 84,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 36,
+      "Name": "DAEDBALL_L",
+      "Input": 16,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 257,
+      "Unknown6": 16644,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": -10,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 17,
+      "ScriptIndex": 900,
+      "Unknown17": 70,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 2,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 37,
+      "Name": "DAEDBALL_M",
+      "Input": 32,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 257,
+      "Unknown6": 16900,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": -10,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 17,
+      "ScriptIndex": 901,
+      "Unknown17": 71,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 2,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 38,
+      "Name": "DAEDBALL_H",
+      "Input": 64,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 257,
+      "Unknown6": 17412,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": -10,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 17,
+      "ScriptIndex": 902,
+      "Unknown17": 72,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 2,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 39,
+      "Name": "DAEDBALL_EX",
+      "Input": 112,
+      "InputFlags": 20528,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 257,
+      "Unknown6": 16392,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 300,
+      "MeterUsed": 300,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 17,
+      "ScriptIndex": 904,
+      "Unknown17": 82,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 2,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 40,
+      "Name": "SOTOJA_L",
+      "Input": 16,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 260,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": -20,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 16,
+      "ScriptIndex": 930,
+      "Unknown17": 73,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 41,
+      "Name": "SOTOJA_M",
+      "Input": 32,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 516,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": -20,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 16,
+      "ScriptIndex": 931,
+      "Unknown17": 74,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 42,
+      "Name": "SOTOJA_H",
+      "Input": 64,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 1028,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": -20,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 16,
+      "ScriptIndex": 932,
+      "Unknown17": 75,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 43,
+      "Name": "SOTOJA_EX",
+      "Input": 112,
+      "InputFlags": 20528,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 8,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 300,
+      "MeterUsed": 300,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 16,
+      "ScriptIndex": 935,
+      "Unknown17": 83,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.95,
+      "Unknown21": 1.7,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 44,
+      "Name": "CA",
+      "Input": 112,
+      "InputFlags": 20496,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 16,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 900,
+      "MeterUsed": 900,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 12,
+      "ScriptIndex": 1200,
+      "Unknown17": 86,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.75,
+      "Unknown21": 1.4,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 45,
+      "Name": "V_SKILL",
+      "Input": 288,
+      "InputFlags": 4128,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 513,
+      "Unknown6": 32,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 895,
+      "Unknown17": 111,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.0,
+      "Unknown21": 0.0,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 46,
+      "Name": "V_TRIGGER",
+      "Input": 576,
+      "InputFlags": 4128,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 1025,
+      "Unknown6": 128,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 600,
+      "VtriggerUsed": 600,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 740,
+      "Unknown17": 110,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.0,
+      "Unknown21": 0.0,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 47,
+      "Name": "C_V_TRIGGER",
+      "Input": 576,
+      "InputFlags": 4128,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 1025,
+      "Unknown6": 128,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 600,
+      "VtriggerUsed": 600,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 741,
+      "Unknown17": 110,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.0,
+      "Unknown21": 0.0,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 48,
+      "Name": "V_REVERSAL",
+      "Input": 120,
+      "InputFlags": 21025,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 64,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 300,
+      "VtriggerUsed": 300,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 890,
+      "Unknown17": 112,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.7,
+      "Unknown21": 1.4,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 49,
+      "Name": "THROW_N",
+      "Input": 144,
+      "InputFlags": 4128,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 8192,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 715,
+      "Unknown17": 30,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.8,
+      "Unknown21": 1.6,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 50,
+      "Name": "THROW_F",
+      "Input": 144,
+      "InputFlags": 4128,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 8192,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 0,
+      "ScriptIndex": 715,
+      "Unknown17": 30,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.8,
+      "Unknown21": 1.6,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 51,
+      "Name": "THROW_B",
+      "Input": 144,
+      "InputFlags": 4128,
+      "PositionRestriction": 0,
+      "Unknown3": 0,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": 8192,
+      "Unknown7": 32,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": 1,
+      "ScriptIndex": 716,
+      "Unknown17": 31,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.8,
+      "Unknown21": 1.6,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 0,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    },
+    {
+      "Offset": 0,
+      "Index": 52,
+      "Name": "APPEAL",
+      "Input": 5104,
+      "InputFlags": 4642,
+      "PositionRestriction": 0,
+      "Unknown3": 1,
+      "RestrictionDistance": 0.0,
+      "ProjectileLimit": 0,
+      "Unknown6": -32768,
+      "Unknown7": 0,
+      "Unknown8": 1,
+      "Unknown9": 0,
+      "MeterRequirement": 0,
+      "MeterUsed": 0,
+      "Unknown10": 0,
+      "Unknown11": 0,
+      "VtriggerRequirement": 0,
+      "VtriggerUsed": 0,
+      "Unknown16": 0,
+      "InputMotionIndex": -1,
+      "ScriptIndex": 1500,
+      "Unknown17": 65535,
+      "Unknown18": 0,
+      "Unknown19": 0,
+      "Unknown20": 0.0,
+      "Unknown21": 0.0,
+      "Unknown22": 0,
+      "Unknown23": 0,
+      "Unknown24": 16777216,
+      "Unknown25": 0,
+      "Unknown26": 0,
+      "NormalOrVtrigger": 0,
+      "Unknown28": 0
+    }
+  ],
+  "CancelLists": [
+    {
+      "CancelIndexNames": "Cancel Index: 0, Names: 5LP, 5LK, 5MP, 5MK, 5HP, 5HK, 2LP, 2LK, 2MP, 2MK, 2HP, 2HK, NIRENKOU, SNAKE, NIKEN_L, NIKEN_M, NIKEN_H, NIKEN_EX, BENDA_L, BENDA_M, BENDA_H, BENDA_EX, DAEDBALL_L, DAEDBALL_M, DAEDBALL_H, DAEDBALL_EX, SOTOJA_L, SOTOJA_M, SOTOJA_H, SOTOJA_EX, CA, V_SKILL, V_TRIGGER, THROW_N, THROW_F, THROW_B, APPEAL",
+      "Index": 0,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "5LP",
+          "Index": 0,
+          "ScriptIndex": 600,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "5LK",
+          "Index": 1,
+          "ScriptIndex": 603,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "5MP",
+          "Index": 2,
+          "ScriptIndex": 601,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "5MK",
+          "Index": 3,
+          "ScriptIndex": 604,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "5HP",
+          "Index": 4,
+          "ScriptIndex": 602,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "5HK",
+          "Index": 5,
+          "ScriptIndex": 605,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "2LP",
+          "Index": 6,
+          "ScriptIndex": 612,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "2LK",
+          "Index": 8,
+          "ScriptIndex": 615,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "2MP",
+          "Index": 10,
+          "ScriptIndex": 614,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "2MK",
+          "Index": 11,
+          "ScriptIndex": 616,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "2HP",
+          "Index": 12,
+          "ScriptIndex": 613,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "2HK",
+          "Index": 13,
+          "ScriptIndex": 617,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIRENKOU",
+          "Index": 22,
+          "ScriptIndex": 670,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SNAKE",
+          "Index": 23,
+          "ScriptIndex": 675,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_L",
+          "Index": 28,
+          "ScriptIndex": 942,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_M",
+          "Index": 29,
+          "ScriptIndex": 943,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_H",
+          "Index": 30,
+          "ScriptIndex": 944,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_EX",
+          "Index": 31,
+          "ScriptIndex": 945,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_L",
+          "Index": 32,
+          "ScriptIndex": 910,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_M",
+          "Index": 33,
+          "ScriptIndex": 911,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_H",
+          "Index": 34,
+          "ScriptIndex": 912,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_EX",
+          "Index": 35,
+          "ScriptIndex": 914,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_L",
+          "Index": 36,
+          "ScriptIndex": 900,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_M",
+          "Index": 37,
+          "ScriptIndex": 901,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_H",
+          "Index": 38,
+          "ScriptIndex": 902,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_EX",
+          "Index": 39,
+          "ScriptIndex": 904,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_L",
+          "Index": 40,
+          "ScriptIndex": 930,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_M",
+          "Index": 41,
+          "ScriptIndex": 931,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_H",
+          "Index": 42,
+          "ScriptIndex": 932,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_EX",
+          "Index": 43,
+          "ScriptIndex": 935,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "CA",
+          "Index": 44,
+          "ScriptIndex": 1200,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "V_SKILL",
+          "Index": 45,
+          "ScriptIndex": 895,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "V_TRIGGER",
+          "Index": 46,
+          "ScriptIndex": 740,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "THROW_N",
+          "Index": 49,
+          "ScriptIndex": 715,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "THROW_F",
+          "Index": 50,
+          "ScriptIndex": 715,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "THROW_B",
+          "Index": 51,
+          "ScriptIndex": 716,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "APPEAL",
+          "Index": 52,
+          "ScriptIndex": 1500,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 1, Names: 8LP, 8LK, 8MP, 8MK, 8HP, 8HK",
+      "Index": 1,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "8LP",
+          "Index": 14,
+          "ScriptIndex": 624,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8LK",
+          "Index": 15,
+          "ScriptIndex": 627,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8MP",
+          "Index": 16,
+          "ScriptIndex": 625,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8MK",
+          "Index": 17,
+          "ScriptIndex": 628,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8HP",
+          "Index": 18,
+          "ScriptIndex": 626,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8HK",
+          "Index": 19,
+          "ScriptIndex": 629,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 2, Names: 8LP, 8LK, 8MP, 8MK, 9HP, 9HK",
+      "Index": 2,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "8LP",
+          "Index": 14,
+          "ScriptIndex": 624,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8LK",
+          "Index": 15,
+          "ScriptIndex": 627,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8MP",
+          "Index": 16,
+          "ScriptIndex": 625,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8MK",
+          "Index": 17,
+          "ScriptIndex": 628,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "9HP",
+          "Index": 20,
+          "ScriptIndex": 632,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "9HK",
+          "Index": 21,
+          "ScriptIndex": 633,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 3, Names: 8LP, 8LK, 8MP, 8MK, 8HK, 9HP",
+      "Index": 3,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "8LP",
+          "Index": 14,
+          "ScriptIndex": 624,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8LK",
+          "Index": 15,
+          "ScriptIndex": 627,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8MP",
+          "Index": 16,
+          "ScriptIndex": 625,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8MK",
+          "Index": 17,
+          "ScriptIndex": 628,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "8HK",
+          "Index": 19,
+          "ScriptIndex": 629,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "9HP",
+          "Index": 20,
+          "ScriptIndex": 632,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 4, Names: NIKEN_L, NIKEN_M, NIKEN_H, NIKEN_EX, BENDA_L, BENDA_M, BENDA_H, BENDA_EX, DAEDBALL_L, DAEDBALL_M, DAEDBALL_H, DAEDBALL_EX, SOTOJA_L, SOTOJA_M, SOTOJA_H, SOTOJA_EX, CA",
+      "Index": 4,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "NIKEN_L",
+          "Index": 28,
+          "ScriptIndex": 942,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_M",
+          "Index": 29,
+          "ScriptIndex": 943,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_H",
+          "Index": 30,
+          "ScriptIndex": 944,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_EX",
+          "Index": 31,
+          "ScriptIndex": 945,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_L",
+          "Index": 32,
+          "ScriptIndex": 910,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_M",
+          "Index": 33,
+          "ScriptIndex": 911,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_H",
+          "Index": 34,
+          "ScriptIndex": 912,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_EX",
+          "Index": 35,
+          "ScriptIndex": 914,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_L",
+          "Index": 36,
+          "ScriptIndex": 900,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_M",
+          "Index": 37,
+          "ScriptIndex": 901,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_H",
+          "Index": 38,
+          "ScriptIndex": 902,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_EX",
+          "Index": 39,
+          "ScriptIndex": 904,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_L",
+          "Index": 40,
+          "ScriptIndex": 930,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_M",
+          "Index": 41,
+          "ScriptIndex": 931,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_H",
+          "Index": 42,
+          "ScriptIndex": 932,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_EX",
+          "Index": 43,
+          "ScriptIndex": 935,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "CA",
+          "Index": 44,
+          "ScriptIndex": 1200,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 5, Names: NIKEN_L, NIKEN_M, NIKEN_H, NIKEN_EX, BENDA_L, BENDA_M, BENDA_H, BENDA_EX, DAEDBALL_L, DAEDBALL_M, DAEDBALL_H, DAEDBALL_EX, SOTOJA_L, SOTOJA_M, SOTOJA_H, SOTOJA_EX, CA",
+      "Index": 5,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "NIKEN_L",
+          "Index": 28,
+          "ScriptIndex": 942,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_M",
+          "Index": 29,
+          "ScriptIndex": 943,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_H",
+          "Index": 30,
+          "ScriptIndex": 944,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_EX",
+          "Index": 31,
+          "ScriptIndex": 945,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_L",
+          "Index": 32,
+          "ScriptIndex": 910,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_M",
+          "Index": 33,
+          "ScriptIndex": 911,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_H",
+          "Index": 34,
+          "ScriptIndex": 912,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_EX",
+          "Index": 35,
+          "ScriptIndex": 914,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_L",
+          "Index": 36,
+          "ScriptIndex": 900,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_M",
+          "Index": 37,
+          "ScriptIndex": 901,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_H",
+          "Index": 38,
+          "ScriptIndex": 902,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_EX",
+          "Index": 39,
+          "ScriptIndex": 904,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_L",
+          "Index": 40,
+          "ScriptIndex": 930,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_M",
+          "Index": 41,
+          "ScriptIndex": 931,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_H",
+          "Index": 42,
+          "ScriptIndex": 932,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_EX",
+          "Index": 43,
+          "ScriptIndex": 935,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "CA",
+          "Index": 44,
+          "ScriptIndex": 1200,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 6, Names: NIKEN_EX, CA, V_SKILL, V_TRIGGER, C_V_TRIGGER, V_REVERSAL",
+      "Index": 6,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "NIKEN_EX",
+          "Index": 31,
+          "ScriptIndex": 945,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "CA",
+          "Index": 44,
+          "ScriptIndex": 1200,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "V_SKILL",
+          "Index": 45,
+          "ScriptIndex": 895,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "V_TRIGGER",
+          "Index": 46,
+          "ScriptIndex": 740,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "C_V_TRIGGER",
+          "Index": 47,
+          "ScriptIndex": 741,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "V_REVERSAL",
+          "Index": 48,
+          "ScriptIndex": 890,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 7,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 8,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 9,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 10,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 11,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 12,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 13,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 14,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 15,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 16, Names: NIKEN_L, NIKEN_M, NIKEN_H, NIKEN_EX, BENDA_L, BENDA_M, BENDA_H, BENDA_EX, DAEDBALL_L, DAEDBALL_M, DAEDBALL_H, DAEDBALL_EX, SOTOJA_L, SOTOJA_M, SOTOJA_H, SOTOJA_EX, CA",
+      "Index": 16,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "NIKEN_L",
+          "Index": 28,
+          "ScriptIndex": 942,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_M",
+          "Index": 29,
+          "ScriptIndex": 943,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_H",
+          "Index": 30,
+          "ScriptIndex": 944,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_EX",
+          "Index": 31,
+          "ScriptIndex": 945,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_L",
+          "Index": 32,
+          "ScriptIndex": 910,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_M",
+          "Index": 33,
+          "ScriptIndex": 911,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_H",
+          "Index": 34,
+          "ScriptIndex": 912,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_EX",
+          "Index": 35,
+          "ScriptIndex": 914,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_L",
+          "Index": 36,
+          "ScriptIndex": 900,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_M",
+          "Index": 37,
+          "ScriptIndex": 901,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_H",
+          "Index": 38,
+          "ScriptIndex": 902,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_EX",
+          "Index": 39,
+          "ScriptIndex": 904,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_L",
+          "Index": 40,
+          "ScriptIndex": 930,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_M",
+          "Index": 41,
+          "ScriptIndex": 931,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_H",
+          "Index": 42,
+          "ScriptIndex": 932,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_EX",
+          "Index": 43,
+          "ScriptIndex": 935,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "CA",
+          "Index": 44,
+          "ScriptIndex": 1200,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 17,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 18,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 19,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 20,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 21, Names: V_REVERSAL",
+      "Index": 21,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "V_REVERSAL",
+          "Index": 48,
+          "ScriptIndex": 890,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 22,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 23,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 24,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 25,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 26,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 27,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 28,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 29,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 30,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 31,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 32, Names: NIKEN_L, NIKEN_M, NIKEN_H, NIKEN_EX, BENDA_L, BENDA_M, BENDA_H, BENDA_EX, DAEDBALL_L, DAEDBALL_M, DAEDBALL_H, DAEDBALL_EX, SOTOJA_L, SOTOJA_M, SOTOJA_H, SOTOJA_EX, CA, C_V_TRIGGER",
+      "Index": 32,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "NIKEN_L",
+          "Index": 28,
+          "ScriptIndex": 942,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_M",
+          "Index": 29,
+          "ScriptIndex": 943,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_H",
+          "Index": 30,
+          "ScriptIndex": 944,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_EX",
+          "Index": 31,
+          "ScriptIndex": 945,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_L",
+          "Index": 32,
+          "ScriptIndex": 910,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_M",
+          "Index": 33,
+          "ScriptIndex": 911,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_H",
+          "Index": 34,
+          "ScriptIndex": 912,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "BENDA_EX",
+          "Index": 35,
+          "ScriptIndex": 914,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_L",
+          "Index": 36,
+          "ScriptIndex": 900,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_M",
+          "Index": 37,
+          "ScriptIndex": 901,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_H",
+          "Index": 38,
+          "ScriptIndex": 902,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_EX",
+          "Index": 39,
+          "ScriptIndex": 904,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_L",
+          "Index": 40,
+          "ScriptIndex": 930,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_M",
+          "Index": 41,
+          "ScriptIndex": 931,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_H",
+          "Index": 42,
+          "ScriptIndex": 932,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "SOTOJA_EX",
+          "Index": 43,
+          "ScriptIndex": 935,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "CA",
+          "Index": 44,
+          "ScriptIndex": 1200,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "C_V_TRIGGER",
+          "Index": 47,
+          "ScriptIndex": 741,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 33, Names: CA",
+      "Index": 33,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "CA",
+          "Index": 44,
+          "ScriptIndex": 1200,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 34, Names: 2LP_R, 2LK_R",
+      "Index": 34,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "2LP_R",
+          "Index": 7,
+          "ScriptIndex": 662,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "2LK_R",
+          "Index": 9,
+          "ScriptIndex": 663,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 35,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 36, Names: CA",
+      "Index": 36,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "CA",
+          "Index": 44,
+          "ScriptIndex": 1200,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 37, Names: C_V_TRIGGER",
+      "Index": 37,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "C_V_TRIGGER",
+          "Index": 47,
+          "ScriptIndex": 741,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 38, Names: DAEDBALL_L, DAEDBALL_M, DAEDBALL_H, DAEDBALL_EX",
+      "Index": 38,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "DAEDBALL_L",
+          "Index": 36,
+          "ScriptIndex": 900,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_M",
+          "Index": 37,
+          "ScriptIndex": 901,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_H",
+          "Index": 38,
+          "ScriptIndex": 902,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "DAEDBALL_EX",
+          "Index": 39,
+          "ScriptIndex": 904,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 39, Names: SNAKE",
+      "Index": 39,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "SNAKE",
+          "Index": 23,
+          "ScriptIndex": 675,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 40, Names: NIKEN_EX",
+      "Index": 40,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "NIKEN_EX",
+          "Index": 31,
+          "ScriptIndex": 945,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 41, Names: NIKEN_L, NIKEN_M, NIKEN_H, NIKEN_EX",
+      "Index": 41,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "NIKEN_L",
+          "Index": 28,
+          "ScriptIndex": 942,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_M",
+          "Index": 29,
+          "ScriptIndex": 943,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_H",
+          "Index": 30,
+          "ScriptIndex": 944,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "Name": "NIKEN_EX",
+          "Index": 31,
+          "ScriptIndex": 945,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 42,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 43,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 44,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 45,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 46,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 47,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 48,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 49,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 50,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 51,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 52,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 53,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 54,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 55,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 56,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 57,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 58,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 59,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 60,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 61,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 62,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 63,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 64,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 65, Names: 2LP_R",
+      "Index": 65,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "2LP_R",
+          "Index": 7,
+          "ScriptIndex": 662,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 66, Names: 2LK_R",
+      "Index": 66,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "2LK_R",
+          "Index": 9,
+          "ScriptIndex": 663,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 67,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 68,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": null,
+      "Index": 69,
+      "Unknown1": 0,
+      "Cancels": null
+    },
+    {
+      "CancelIndexNames": "Cancel Index: 70, Names: SNAKE_KICK",
+      "Index": 70,
+      "Unknown1": 0,
+      "Cancels": [
+        {
+          "Name": "SNAKE_KICK",
+          "Index": 24,
+          "ScriptIndex": 676,
+          "CancelInts": null,
+          "UnknownBytes": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+      ]
+    }
+  ],
+  "RawUassetHeaderDontTouch": "wYMqnvv///8AAAAAAAAAAAAAAAAAAAAA5AEAAAUAAABOb25lAAAAAIALAAAAowAAAAEAAACYAQAAAgAAAGABAADcAQAAAAAAAOABAAAAAAAApLFGcbI/V0yKuip0jWhNCgEAAAABAAAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsfCngAAAAAAAAAADgAQAA3YkAAAAAAAAAAAAAAAAAACsAAAAvR2FtZS9DaGFyYS9GQU4vQmF0dGxlUmVzb3VyY2UvMDAyL0JDTV9GQU4AFAAAAC9TY3JpcHQvQ29yZVVPYmplY3QAEQAAAC9TY3JpcHQvS2l3aUdhbWUADgAAAEFycmF5UHJvcGVydHkACAAAAEJDTV9GQU4ADQAAAEJ5dGVQcm9wZXJ0eQAGAAAAQ2xhc3MABQAAAERhdGEABgAAAEtXQkNNAAUAAABOb25lAAgAAABQYWNrYWdlAAEAAAAAAAAABgAAAAAAAAD+////CAAAAAAAAAABAAAAAAAAAAoAAAAAAAAAAAAAAAIAAAAAAAAA/////wAAAAAAAAAABAAAAAAAAAADAAAA+YcAAOQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=="
+}

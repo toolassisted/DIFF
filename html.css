@@ -77,7 +77,10 @@ ul.jsondiffpatch-delta {
 }
 .jsondiffpatch-unchanged-showing .jsondiffpatch-arrow,
 .jsondiffpatch-unchanged-hiding .jsondiffpatch-arrow {
-  display: none;
+  /*display: none;*/
+}
+.jsondiffpatch-unchanged .jsondiffpatch-value {
+  display: inline;
 }
 .jsondiffpatch-value {
   /*display: inline-block;*/

@@ -40,6 +40,9 @@
 		.DIFF2 {
 			background-color: #dfd;
 		}
+		.DIFF3 {
+			background-color: #ffd;
+		}
 		#JSONDIV li.DIFF1 + li {
 			background-color: #dfd;
 		}
@@ -52,14 +55,27 @@
 		#DIFF {
 			-webkit-overflow-scrolling: touch;
 			overflow-y: scroll;
-			overflow-x: hidden;
+			overflow-x: auto;
 			flex: 1 1 100%;
+			/*flex: 1 4 50%;*/
+		}
+		#SCRIPT {
+			-webkit-overflow-scrolling: touch;
+			overflow-y: scroll;
+			overflow-x: auto;
+			/*flex: 1 1 50%; */
+			flex: 0 0 auto;
+			padding-right: 1em;
+		}
+		#SCRIPT.fold {
+			display: none;
 		}
 	</style>
 </head>
 <body>
 <section style="display: flex; flex-direction: row; flex: 1;">
 <nav id="JSONDIV"><ul><li><a href="https://twitter.com/arlieth/status/810015951890554880">U C HELP</a></li></ul><div>BAC</div></nav>
+<aside id="SCRIPT" class="fold"><pre></pre></aside>
 <article id="DIFF">DIFF
 <div><a href="https://twitter.com/arlieth/status/810015951890554880"><img src="TWITTER.PNG" /></a></div>
 </article>
@@ -76,6 +92,7 @@ d3.select("#JSONDIV").append("ul").attr("id","BACUL").selectAll("li").data(CHARB
 	UCHASH(d);
 	d3.selectAll(".DIFF1").classed("DIFF1",false);
 	d3.select(this).classed("DIFF1",true);
+	d3.select("#SCRIPT").classed("fold", true);
 	document.getElementById('DIFF').innerHTML = "<span class=\"DIFF1\">" + CHARBAC[i] + "</span> <span class=\"DIFF2\">" + CHARBAC[i+1] + "</span>";
 	d3.json("JSON/"+CHARBAC[i]+".json", function(error1, data1) {
 		d3.json("JSON/"+CHARBAC[i+1]+".json", function(error2, data2) {
@@ -87,16 +104,30 @@ d3.select("#JSONDIV").append("ul").attr("id","BACUL").selectAll("li").data(CHARB
 				return obj.Name || obj.Index || "$$index" + index;
 			}}).diff(bac1, bac2);
 			// beautiful html diff
-			var diff = jsondiffpatch.formatters.html.format(delta, data1);
+			var diff = jsondiffpatch.formatters.html.format(delta);
 			if (diff == "") diff = "NO DIFF LOL";
 			document.getElementById('DIFF').innerHTML += "<br><br>" + diff;
 			// jsondiffpatch.formatters.html.hideUnchanged();
-			d3.selectAll(".jsondiffpatch-unchanged").remove();
+			// d3.selectAll("#DIFF .jsondiffpatch-unchanged").remove();
 			// d3.selectAll("li[data-key=Moves] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); });
 			d3.selectAll("li[data-key=Moves] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
 			d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
+			d3.selectAll("li[data-key=Moves] > ul > li.jsondiffpatch-node").insert("button", "ul").text("SCRIPT").on("click", UCSCRIPT);
+			d3.selectAll("li[data-key=Moves] > ul > li.jsondiffpatch-added").insert("button", "div:nth-child(2)").text("SCRIPT").on("click", UCSCRIPT);
 			d3.selectAll("li[data-key=HitboxEffects] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=HitboxEffects] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
 			d3.selectAll("li[data-key=HitboxEffects] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
+			function UCSCRIPT(){
+				d3.select("#SCRIPT").classed("fold", false);
+				var datakey = d3.select(this.parentNode).attr("data-key");
+				var delta2 = jsondiffpatch.create({ objectHash: function(obj, index) {
+					if (obj == null) return "$$index" + index;
+					return obj.Name || obj.Index || "$$index" + index;
+				}}).diff(bac1.Moves[datakey], bac2.Moves[datakey]);
+				var diff2 = jsondiffpatch.formatters.html.format(delta2,bac1.Moves[datakey]);
+				document.getElementById('SCRIPT').innerHTML = "<span class=\"DIFF1\">" + CHARBAC[i] + "</span> <span class=\"DIFF2\">" + CHARBAC[i+1] + "</span>" + "<br><br><span class=\"DIFF3\">" + datakey + ": </span>";
+				document.getElementById('SCRIPT').innerHTML += "<br><br>" + diff2;
+				// d3.select("#SCRIPT pre").text(JSON.stringify(bac1.Moves[datakey],null,2));
+			}
 		});
 	});
 });
@@ -106,6 +137,7 @@ d3.select("#JSONDIV").append("ul").attr("id","BCMUL").selectAll("li").data(CHARB
 	UCHASH(d);
 	d3.selectAll(".DIFF1").classed("DIFF1",false);
 	d3.select(this).classed("DIFF1",true);
+	d3.select("#SCRIPT").classed("fold", true);
 	document.getElementById('DIFF').innerHTML = "<span class=\"DIFF1\">" + CHARBCM[i] + "</span> <span class=\"DIFF2\">" + CHARBCM[i+1] + "</span>";
 	d3.json("JSON/"+CHARBCM[i]+".json", function(error1, data1) {
 		d3.json("JSON/"+CHARBCM[i+1]+".json", function(error2, data2) {
@@ -117,11 +149,11 @@ d3.select("#JSONDIV").append("ul").attr("id","BCMUL").selectAll("li").data(CHARB
 				return obj.Name || obj.Index || "$$index" + index;
 			}}).diff(bcm1, bcm2);
 			// beautiful html diff
-			var diff = jsondiffpatch.formatters.html.format(delta, data1);
+			var diff = jsondiffpatch.formatters.html.format(delta);
 			if (diff == "") diff = "NO DIFF LOL";
 			document.getElementById('DIFF').innerHTML += "<br><br>" + diff;
 			// jsondiffpatch.formatters.html.hideUnchanged();
-			d3.selectAll(".jsondiffpatch-unchanged").remove();
+			// d3.selectAll(".jsondiffpatch-unchanged").remove();
 			d3.selectAll("li[data-key=Moves] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
 			d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
 			d3.selectAll("li[data-key=CancelLists] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=CancelLists] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
@@ -195,6 +227,7 @@ function UCBAC(data) {
 		effects["Index"] = effect.Index;
 		effects["Moves"] = hitboxes[effect.Index];
 		if (hitboxesall[effect.Index]) effects["JSON"] = data.JSON + ": " + hitboxesall[effect.Index];
+		// if (hitboxesall[effect.Index]) effects["Scripts"] = hitboxesall[effect.Index];
 		effects["HIT_STAND"] = effect["HIT_STAND"];
 		effects["COUNTERHIT_STAND"] = effect["COUNTERHIT_STAND"];
 		effects["GUARD_STAND"] = effect["GUARD_STAND"];

@@ -104,10 +104,16 @@ li[data-key=HitboxEffects] > ul > li > div.jsondiffpatch-property-name {
   /*position: sticky;*/
   margin-top: 1em;
 }
+li.jsondiffpatch-added {
+  margin-top: 1em;
+  /*max-height: 15em;*/
+  /*overflow-y: scroll;*/
+  /*-webkit-overflow-scrolling: touch;*/
+}
 /*li[data-key=Moves].fold > ul > li > div.jsondiffpatch-property-name + ul > li,*/
 /*li[data-key=Moves].fold > ul > li > div.jsondiffpatch-property-name + div,*/
-div.fold + div,
-div.fold + ul > li {
+div.fold ~ div,
+div.fold ~ ul > li {
   display: none;
 }
 .jsondiffpatch-property-name:after {
@@ -179,4 +185,14 @@ ul.jsondiffpatch-textdiff {
   background: red;
   color: white;
   font-weight: bold;
+}
+li.jsondiffpatch-node > button {
+  margin-top: 1.2em;
+  margin-bottom: 0.2em;
+  margin-left: 1em;
+}
+li.jsondiffpatch-added > button {
+  /*margin-top: 1.2em;*/
+  /*margin-bottom: 0.2em;*/
+  margin-left: 1em;
 }

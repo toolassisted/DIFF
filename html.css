@@ -88,8 +88,16 @@ ul.jsondiffpatch-delta {
   vertical-align: top;
 }
 li[data-key=Moves] > div,
-li[data-key=HitboxEffects] > div,
 li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name,
+li[data-key=Inputs] > div,
+li[data-key=Inputs] > ul > li > div.jsondiffpatch-property-name,
+li[data-key=Charges] > div,
+li[data-key=Charges] > ul > li > div.jsondiffpatch-property-name,
+li[data-key=CancelLists] > div,
+li[data-key=CancelLists] > ul > li > div.jsondiffpatch-property-name,
+li[data-key=Moves] > div,
+li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name,
+li[data-key=HitboxEffects] > div,
 li[data-key=HitboxEffects] > ul > li > div.jsondiffpatch-property-name {
   background-color: #ffd;
   cursor: pointer;

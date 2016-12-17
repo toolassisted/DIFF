@@ -59,8 +59,10 @@
 </head>
 <body>
 <section style="display: flex; flex-direction: row; flex: 1;">
-<nav id="JSONDIV">BAC</nav>
-<article id="DIFF">DIFF</article>
+<nav id="JSONDIV"><ul><li><a href="https://twitter.com/arlieth/status/810015951890554880">U C HELP</a></li></ul><div>BAC</div></nav>
+<article id="DIFF">DIFF
+<div><a href="https://twitter.com/arlieth/status/810015951890554880"><img src="TWITTER.PNG" /></a></div>
+</article>
 </section>
 <script type="text/javascript">
 var CHARBAC = [
@@ -92,8 +94,8 @@ d3.select("#JSONDIV").append("ul").attr("id","BACUL").selectAll("li").data(CHARB
 			d3.selectAll(".jsondiffpatch-unchanged").remove();
 			// d3.selectAll("li[data-key=Moves] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); });
 			d3.selectAll("li[data-key=Moves] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
-			d3.selectAll("li[data-key=HitboxEffects] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=HitboxEffects] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
 			d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
+			d3.selectAll("li[data-key=HitboxEffects] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=HitboxEffects] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
 			d3.selectAll("li[data-key=HitboxEffects] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
 		});
 	});
@@ -107,6 +109,8 @@ d3.select("#JSONDIV").append("ul").attr("id","BCMUL").selectAll("li").data(CHARB
 	document.getElementById('DIFF').innerHTML = "<span class=\"DIFF1\">" + CHARBCM[i] + "</span> <span class=\"DIFF2\">" + CHARBCM[i+1] + "</span>";
 	d3.json("JSON/"+CHARBCM[i]+".json", function(error1, data1) {
 		d3.json("JSON/"+CHARBCM[i+1]+".json", function(error2, data2) {
+			data1["JSON"] = CHARBCM[i];
+			data2["JSON"] = CHARBCM[i+1];
 			var bcm1 = UCBCM(data1), bcm2 = UCBCM(data2);
 			var delta = jsondiffpatch.create({ objectHash: function(obj, index) {
 				if (obj == null) return "$$index" + index;
@@ -118,6 +122,14 @@ d3.select("#JSONDIV").append("ul").attr("id","BCMUL").selectAll("li").data(CHARB
 			document.getElementById('DIFF').innerHTML += "<br><br>" + diff;
 			// jsondiffpatch.formatters.html.hideUnchanged();
 			d3.selectAll(".jsondiffpatch-unchanged").remove();
+			d3.selectAll("li[data-key=Moves] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
+			d3.selectAll("li[data-key=Moves] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
+			d3.selectAll("li[data-key=CancelLists] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=CancelLists] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
+			d3.selectAll("li[data-key=CancelLists] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
+			d3.selectAll("li[data-key=Inputs] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=Inputs] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
+			d3.selectAll("li[data-key=Inputs] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
+			d3.selectAll("li[data-key=Charges] > div").on("click", function() { var d = d3.select(this.parentNode); d.classed("fold", !d.classed("fold")); d3.selectAll("li[data-key=Charges] > ul > li > div.jsondiffpatch-property-name").classed("fold", d.classed("fold")); });
+			d3.selectAll("li[data-key=Charges] > ul > li > div.jsondiffpatch-property-name").on("click", function() { d3.select(this).classed("fold", !d3.select(this).classed("fold"))});
 		});
 	});
 });
@@ -130,6 +142,7 @@ function UCBCM(data) {
 	});
 	data.Inputs.forEach(function(input, index) {
 		if (input == null) return;
+		// input["JSON"] = data.JSON + ": " + input.Name;
 		// bcm.Inputs[input.Index + " " + input.Name] = input;
 		bcm.Inputs["Input " + input.Index] = input;
 	});

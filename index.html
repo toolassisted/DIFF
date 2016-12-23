@@ -12,6 +12,7 @@
 			width: 100%;
 			height: 100%;
 			margin: 0;
+			padding: 0;
 		}
 		html {
 			/*position: fixed;*/
@@ -25,13 +26,14 @@
 			-webkit-overflow-scrolling: touch;
 			overflow-y: scroll;
 			padding-right: 1em;
-			margin-right: 1em;
+			/*margin-right: 1em;*/
 			flex: 0 0 auto;
+			padding-bottom: 50vh;
 		}
 		#JSONDIV ul {
   			font-family: 'Consolas', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Courier, monospace;
 		}
-		#JSONDIV li {
+		#JSONDIV li, #SCRIPT li {
 			cursor: pointer;
 		}
 		.DIFF1 {
@@ -46,18 +48,24 @@
 		#JSONDIV li.DIFF1 + li {
 			background-color: #dfd;
 		}
-		#JSONDIV li:hover {
+		#BACUL li:hover, #BCMUL li:hover {
 			background-color: #fcc !important;
 		}
-		#JSONDIV li:hover + li {
+		#SCRIPT ol li:hover, #CHARUL li:hover, #BACUL li:hover + li, #BCMUL li:hover + li {
 			background-color: #cfc !important;
 		}
 		#DIFF {
 			-webkit-overflow-scrolling: touch;
 			overflow-y: scroll;
 			overflow-x: auto;
-			flex: 1 1 100%;
+			/*flex: 1 1 100%;*/
 			/*flex: 1 4 50%;*/
+			flex: 1 1 auto;
+			width: 100%;
+			padding-right: 1em;
+			padding-left: 1em;
+			padding-bottom: 50vh;
+			display: block;
 		}
 		#SCRIPT {
 			-webkit-overflow-scrolling: touch;
@@ -66,27 +74,407 @@
 			/*flex: 1 1 50%; */
 			flex: 1 1 30em;
 			padding-right: 1em;
+			padding-left: 1em;
+			padding-bottom: 50vh;
 		}
 		#SCRIPT.fold {
 			display: none;
 		}
+		.pre-wrap {
+			white-space: pre-wrap;
+		}
+		.BOXDIV {
+			text-align: right;
+			padding-right: 0.3em;
+			margin-left: 0.3em;
+			line-height: 1em;
+			flex: 0 0 auto;
+			min-width: 2em;
+			color: #999;
+		}
+		#FRAMETABLEOL div {
+			/*width: 70em;*/
+			/*overflow: auto;*/
+			font-family: monospace;
+		}
+		#FRAMETABLE {
+			font-family: monospace;
+			/*overflow: auto;*/
+		}
+		#FRAMETABLE td {
+			min-width: 2em;
+			text-align: center;
+			vertical-align: top;
+		}
+		#FRAMETABLE th {
+			white-space: nowrap;
+			min-width: 7em;
+		}
+		.CANCELDIV {
+			font-family: monospace;
+			padding-left: 8em;
+			color: #999;
+		}
+		#FILEDIV {
+			margin-top: 1em;
+		}
+		.LAYOUTBUTTON {
+			margin-left: 2em;
+			width: 5em;
+		}
+		.UNOC {
+			display: none;
+		}
+
 	</style>
 </head>
 <body>
-<section style="display: flex; flex-direction: row; flex: 1;">
-<nav id="JSONDIV"><ul><li><a href="https://twitter.com/arlieth/status/810015951890554880">U C HELP</a></li></ul><div>BAC</div></nav>
+<nav id="JSONDIV"><ul><li><a href="https://twitter.com/arlieth/status/810015951890554880">U C HELP</a></li></ul><div>CHAR</div></nav>
 <aside id="SCRIPT" class="fold"><pre></pre></aside>
-<article id="DIFF">DIFF
+<main id="DIFF">DIFF
 <div><a href="https://twitter.com/arlieth/status/810015951890554880"><img src="TWITTER.PNG" /></a></div>
-</article>
-</section>
+</main>
 <script type="text/javascript">
+var HASH = { NAME: null, INDEX: null, CLICK: false };
+var CHARFILE = [
+	"ALX_000", "ALX_001", "ALX_002", "ALX_003", "ALX_004", "BLR_000", "BLR_001", "BLR_002", "BLR_003", "BLR_004", "BLR_005", "BRD_000", "BRD_001", "BRD_002", "BRD_003", "BRD_004", "BSN_000", "BSN_001", "BSN_002", "CMN_000", "CMN_001", "CMN_002", "CMY_000", "CMY_001", "CMY_002", "CMY_003", "CMY_004", "CNL_000", "CNL_001", "CNL_002", "CNL_003", "CNL_004", "CNL_005", "DSM_000", "DSM_001", "DSM_002", "DSM_003", "DSM_004", "DSM_005", "FAN_000", "FAN_001", "FAN_002", "FAN_003", "FAN_004", "GUL_000", "GUL_001", "GUL_002", "GUL_003", "IBK_000", "IBK_001", "IBK_002", "JRI_000", "JRI_001", "JRI_002", "KEN_000", "KEN_001", "KEN_002", "KEN_003", "KEN_004", "KEN_005", "KRN_000", "KRN_001", "KRN_002", "KRN_003", "KRN_004", "LAR_000", "LAR_001", "LAR_002", "LAR_003", "LAR_004", "NCL_000", "NCL_001", "NCL_002", "NCL_003", "NCL_004", "NSH_000", "NSH_001", "NSH_002", "NSH_003", "NSH_004", "RMK_000", "RMK_001", "RMK_002", "RMK_003", "RSD_000", "RSD_001", "RSD_002", "RSD_003", "RSD_004", "RYU_000", "RYU_001", "RYU_002", "RYU_003", "RYU_004", "RYU_005", "URN_000", "URN_001", "URN_002", "VEG_000", "VEG_001", "VEG_002", "VEG_003", "VEG_004", "VEG_005", "VEG_006", "Z21_000", "ZGF_000", "ZGF_001", "ZGF_002", "ZGF_003"
+	];
 var CHARBAC = [
 	"ALX_000_BAC", "ALX_001_BAC", "ALX_002_BAC", "ALX_003_BAC", "ALX_004_BAC", "BLR_000_BAC", "BLR_001_BAC", "BLR_002_BAC", "BLR_003_BAC", "BLR_004_BAC", "BLR_005_BAC", "BRD_000_BAC", "BRD_001_BAC", "BRD_002_BAC", "BRD_003_BAC", "BRD_004_BAC", "BSN_000_BAC", "BSN_001_BAC", "BSN_002_BAC", "CMN_000_BAC", "CMN_001_BAC", "CMN_002_BAC", "CMY_000_BAC", "CMY_001_BAC", "CMY_002_BAC", "CMY_003_BAC", "CMY_004_BAC", "CNL_000_BAC", "CNL_001_BAC", "CNL_002_BAC", "CNL_003_BAC", "CNL_004_BAC", "CNL_005_BAC", "DSM_000_BAC", "DSM_001_BAC", "DSM_002_BAC", "DSM_003_BAC", "DSM_004_BAC", "DSM_005_BAC", "FAN_000_BAC", "FAN_001_BAC", "FAN_002_BAC", "FAN_003_BAC", "FAN_004_BAC", "GUL_000_BAC", "GUL_001_BAC", "GUL_002_BAC", "GUL_003_BAC", "IBK_000_BAC", "IBK_001_BAC", "IBK_002_BAC", "JRI_000_BAC", "JRI_001_BAC", "JRI_002_BAC", "KEN_000_BAC", "KEN_001_BAC", "KEN_002_BAC", "KEN_003_BAC", "KEN_004_BAC", "KEN_005_BAC", "KRN_000_BAC", "KRN_001_BAC", "KRN_002_BAC", "KRN_003_BAC", "KRN_004_BAC", "LAR_000_BAC", "LAR_001_BAC", "LAR_002_BAC", "LAR_003_BAC", "LAR_004_BAC", "NCL_000_BAC", "NCL_001_BAC", "NCL_002_BAC", "NCL_003_BAC", "NCL_004_BAC", "NSH_000_BAC", "NSH_001_BAC", "NSH_002_BAC", "NSH_003_BAC", "NSH_004_BAC", "RMK_000_BAC", "RMK_001_BAC", "RMK_002_BAC", "RMK_003_BAC", "RSD_000_BAC", "RSD_001_BAC", "RSD_002_BAC", "RSD_003_BAC", "RSD_004_BAC", "RYU_000_BAC", "RYU_001_BAC", "RYU_002_BAC", "RYU_003_BAC", "RYU_004_BAC", "RYU_005_BAC", "URN_000_BAC", "URN_001_BAC", "URN_002_BAC", "VEG_000_BAC", "VEG_001_BAC", "VEG_002_BAC", "VEG_003_BAC", "VEG_004_BAC", "VEG_005_BAC", "VEG_006_BAC", "Z21_000_BAC", "ZGF_000_BAC", "ZGF_001_BAC", "ZGF_002_BAC", "ZGF_003_BAC"
 	];
 var CHARBCM = [
 	"ALX_000_BCM", "ALX_001_BCM", "ALX_002_BCM", "ALX_003_BCM", "ALX_004_BCM", "BLR_000_BCM", "BLR_001_BCM", "BLR_002_BCM", "BLR_003_BCM", "BLR_004_BCM", "BLR_005_BCM", "BRD_000_BCM", "BRD_001_BCM", "BRD_002_BCM", "BRD_003_BCM", "BRD_004_BCM", "BSN_000_BCM", "BSN_001_BCM", "BSN_002_BCM", "CMN_000_BCM", "CMN_001_BCM", "CMN_002_BCM", "CMY_000_BCM", "CMY_001_BCM", "CMY_002_BCM", "CMY_003_BCM", "CMY_004_BCM", "CNL_000_BCM", "CNL_001_BCM", "CNL_002_BCM", "CNL_003_BCM", "CNL_004_BCM", "CNL_005_BCM", "DSM_000_BCM", "DSM_001_BCM", "DSM_002_BCM", "DSM_003_BCM", "DSM_004_BCM", "DSM_005_BCM", "FAN_000_BCM", "FAN_001_BCM", "FAN_002_BCM", "FAN_003_BCM", "FAN_004_BCM", "GUL_000_BCM", "GUL_001_BCM", "GUL_002_BCM", "GUL_003_BCM", "IBK_000_BCM", "IBK_001_BCM", "IBK_002_BCM", "JRI_000_BCM", "JRI_001_BCM", "JRI_002_BCM", "KEN_000_BCM", "KEN_001_BCM", "KEN_002_BCM", "KEN_003_BCM", "KEN_004_BCM", "KEN_005_BCM", "KRN_000_BCM", "KRN_001_BCM", "KRN_002_BCM", "KRN_003_BCM", "KRN_004_BCM", "LAR_000_BCM", "LAR_001_BCM", "LAR_002_BCM", "LAR_003_BCM", "LAR_004_BCM", "NCL_000_BCM", "NCL_001_BCM", "NCL_002_BCM", "NCL_003_BCM", "NCL_004_BCM", "NSH_000_BCM", "NSH_001_BCM", "NSH_002_BCM", "NSH_003_BCM", "NSH_004_BCM", "RMK_000_BCM", "RMK_001_BCM", "RMK_002_BCM", "RMK_003_BCM", "RSD_000_BCM", "RSD_001_BCM", "RSD_002_BCM", "RSD_003_BCM", "RSD_004_BCM", "RYU_000_BCM", "RYU_001_BCM", "RYU_002_BCM", "RYU_003_BCM", "RYU_004_BCM", "RYU_005_BCM", "URN_000_BCM", "URN_001_BCM", "URN_002_BCM", "VEG_000_BCM", "VEG_001_BCM", "VEG_002_BCM", "VEG_003_BCM", "VEG_004_BCM", "VEG_005_BCM", "VEG_006_BCM", "Z21_000_BCM", "ZGF_000_BCM", "ZGF_001_BCM", "ZGF_002_BCM", "ZGF_003_BCM"
 	];
+// d3.select("#JSONDIV").append("span").text("CHAR");
+d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHARFILE).enter().append("li").text(function(d){return d;}).on("click",function(charfile,cfi){
+	var HASHCLICK = HASH.CLICK; HASH.CLICK = false;
+	var HASHNAME = HASH.NAME; HASH.NAME = null;
+	var HASHINDEX = HASH.INDEX; HASH.INDEX = null;
+	if (cfi>=CHARBAC.length) return;
+	if (!HASHCLICK) UCHASH(charfile);
+	d3.selectAll(".DIFF2").classed("DIFF2",false);
+	d3.select(this).classed("DIFF2",true);
+	d3.select("#SCRIPT").classed("fold", false);
+	document.getElementById('DIFF').innerHTML = "<span class=\"DIFF2\">" + CHARBAC[cfi] + "</span> <span class=\"DIFF2\">" + CHARBCM[cfi] + "</span>";
+	d3.json("JSON/"+CHARFILE[cfi]+"_BAC.json", function(error1, data1) {
+		d3.json("JSON/"+CHARFILE[cfi]+"_BCM.json", function(error2, data2) {
+			data1["JSON"] = CHARBAC[cfi];
+			data2["JSON"] = CHARBCM[cfi];
+			// var bac1 = UCBAC(data1), bcm1 = UCBCM(data2);
+			// document.getElementById('DIFF').innerHTML += "<br><br>";			
+			// console.log(data2);
+			// console.log(data1);
+			var SCRIPTBOX = d3.select("#SCRIPT");
+			SCRIPTBOX.selectAll("*").remove();
+			SCRIPTBOX.append("div").text(CHARFILE[cfi]).classed("DIFF2", true);
+			var charfileul = SCRIPTBOX.append("ul").attr("id","CHARFILE");
+			var bcmol = charfileul.append("li").text(CHARBCM[cfi]).append("ol");
+			var bacol = charfileul.append("li").text(CHARBAC[cfi]).append("ol");;
+			bcmol.append("li").text("MOVES").attr("value",data2.Moves.length).on("click",function(d){ d3.select("#MOVE0").node().scrollIntoView(); });
+			bcmol.append("li").text("CHARGES").attr("value",data2.Charges.length).on("click",function(d){ d3.select("#CHARGE0").node().scrollIntoView(); });
+			bcmol.append("li").text("INPUTS").attr("value",data2.Inputs.length).on("click",function(d){ d3.select("#INPUT0").node().scrollIntoView(); });
+			bcmol.append("li").text("CANCEL LISTS").attr("value",data2.CancelLists.length).on("click",function(d){ d3.select("#CANCEL0").node().scrollIntoView(); });
+			bacol.append("li").text("HITBOX EFFECTS").attr("value",data1.HitboxEffectses.length).on("click",function(d){ d3.select("#EFFECT0").node().scrollIntoView(); });
+			bacol.append("li").text("SCRIPTS").attr("value",data1.MoveLists[0].Moves.length).on("click",function(d){ d3.select("#SCRIPT0").node().scrollIntoView(); });
+			if (data1.MoveLists.length == 2) bacol.append("li").text("SCRIPTS VT").attr("value",data1.MoveLists[1].Moves.length).on("click",function(d){ d3.select("#SCRIPTVT0").node().scrollIntoView(); });
+
+			var DIFFBOX = d3.select("#DIFF");
+			DIFFBOX.selectAll("*").remove();
+			var DIFFHEAD = DIFFBOX.append("div").text(CHARFILE[cfi]).classed("DIFF2", true);
+			DIFFHEAD.append("button").classed("LAYOUTBUTTON", true).text("| | |").on("click",function(){ d3.select("#JSONDIV").classed("UNOC",false); d3.select("#SCRIPT").classed("UNOC",false); });
+			DIFFHEAD.append("button").classed("LAYOUTBUTTON", true).text("| |").on("click",function(){ d3.select("#JSONDIV").classed("UNOC",true); d3.select("#SCRIPT").classed("UNOC",false); });
+			DIFFHEAD.append("button").classed("LAYOUTBUTTON", true).text("|").on("click",function(){ d3.select("#JSONDIV").classed("UNOC",true); d3.select("#SCRIPT").classed("UNOC",true); });
+			// var difful = DIFFBOX.append("ul").attr("id","CHARFILE");
+			// difful.append("li").text(CHARBCM[cfi]);
+			// difful.append("li").text(CHARBAC[cfi]);
+
+			var FILEDIV = DIFFBOX.append("div").attr("id","FILEDIV");
+
+			function UCSCRIPTTABLE(movescript, fileol) {
+				//fileol.attr("id","FRAMETABLEOL");//style("width","50em").style("overflow","auto");
+				var scriptlist = fileol.append("li").attr("value",movescript.Index).classed("pre-wrap", true);
+				var ticks = movescript.TotalTicks;
+				var IASA = movescript.InterruptFrame == -1 ? ticks : (movescript.InterruptFrame+1);
+
+				var frametable = scriptlist.append("div").append("table").attr("id","FRAMETABLE");
+				var framehead = frametable.append("thead").append("tr").style("color","#ccc");
+				var framebody = frametable.append("tbody").style("color","#999");
+				// framehead.append("th").text("FRAME"); framehead.selectAll("td").data(d3.range(1,ticks+1)).enter().append("td").text(function(d){return d;});//.style("width","1.5em");
+				var framerow = framebody.append("tr"); framerow.append("th").text("IASA"); framerow.selectAll("td").data(d3.range(1,IASA+1)).enter().append("td").text(function(d){return d;});
+
+				var framerow = framebody.append("tr").attr("id","FRAME-PROX"); framerow.append("th").text("PROXIMITY"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+				var framerow = framebody.append("tr").attr("id","FRAME-HIT"); framerow.append("th").text("HIT"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});					
+				var framerow = framebody.append("tr").attr("id","FRAME-PROJ"); framerow.append("th").text("PROJ"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+				var framerow = framebody.append("tr").attr("id","FRAME-THROW"); framerow.append("th").text("THROW"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+
+				var framerow = framebody.append("tr").attr("id","FRAME-HURT-HIT"); framerow.append("th").text("HURT HIT"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+				var framerow = framebody.append("tr").attr("id","FRAME-HURT-PROJ"); framerow.append("th").text("HURT PROJ"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+				var framerow = framebody.append("tr").attr("id","FRAME-HURT-THROW"); framerow.append("th").text("HURT THROW"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+				var framerow = framebody.append("tr").attr("id","FRAME-HURT-ARMOR"); framerow.append("th").text("HURT ARMOR"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+
+				if (movescript.Hitboxes != null)
+				movescript.Hitboxes.forEach(function(hitbox, index){
+					var bgcolor = hitbox.HitType == 4 ? "#eee" : hitbox.HitType == 3 ? "#eee" : hitbox.HitType == 0 ? "#fdd" : hitbox.HitType == 1 ? "#fed" : hitbox.HitType == 2 ? "#ddf" : "";
+					if (hitbox.HitType == 4) frametable.selectAll("#FRAME-PROX td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color",bgcolor);
+					if (hitbox.HitType == 3) frametable.selectAll("#FRAME-PROX td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color",bgcolor);
+					if (hitbox.HitType == 0) frametable.selectAll("#FRAME-HIT td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color",bgcolor);
+					if (hitbox.HitType == 1) frametable.selectAll("#FRAME-PROJ td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color",bgcolor);
+					if (hitbox.HitType == 2) frametable.selectAll("#FRAME-THROW td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color",bgcolor);
+				});
+				if (movescript.Hurtboxes != null)
+				movescript.Hurtboxes.forEach(function(hitbox, index){
+					var bgcolor = hitbox.Flag1 == 4 ? "#dff" : hitbox.Flag1 == 3 ? "#dfd" : hitbox.Flag1 == 1 ? "#fed" : "";
+					if ((hitbox.Flag1 & 2) == 2) frametable.selectAll("#FRAME-HURT-HIT td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#dfd");
+					if ((hitbox.Flag1 & 1) == 1) frametable.selectAll("#FRAME-HURT-PROJ td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#fed");
+					if ((hitbox.Flag1 & 4) == 4) frametable.selectAll("#FRAME-HURT-THROW td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#dff");
+					if (hitbox.HitEffect > 0) frametable.selectAll("#FRAME-HURT-ARMOR td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#fef").text(hitbox.HitEffect);
+				});
+				if (movescript.Cancels != null)
+				movescript.Cancels.forEach(function(cancel, index){
+					var bgcolor = cancel.Type == 8 ? "#fed" : "#ffd";
+					if (cancel.Type == 8 || cancel.Type == 7) {
+						var framerow = framebody.append("tr").attr("id","FRAME-CANCEL"); framerow.append("th").text("CANCEL"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+						framerow.selectAll("td").data(d3.range(cancel.TickStart+1,cancel.TickEnd+1), function(d){return d;}).style("background-color",bgcolor).text(cancel.CancelList);
+						if (cancel.CancelList >= 0)	fileol.append("div").classed("CANCELDIV",true).text("* "+data2.CancelLists[cancel.CancelList].CancelIndexNames);
+					}
+				});
+				if (movescript.AutoCancels != null)
+				movescript.AutoCancels.forEach(function(cancel, index){
+					var bgcolor = "#ffd";
+					var framerow = framebody.append("tr").attr("id","FRAME-CANCEL"); framerow.append("th").text("AUTO"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+					framerow.selectAll("td").data(d3.range(cancel.TickStart+1,cancel.TickEnd+1), function(d){return d;}).style("background-color",bgcolor).text(cancel.MoveIndex);
+					fileol.append("div").classed("CANCELDIV",true).text("* " + "AutoCancel MoveIndex: " + cancel.MoveIndex + ", Condition: " + cancel.Condition);
+				});
+			}
+			function UCSCRIPT(movescript, fileol) {
+				var scriptdiv = fileol.append("li").attr("value",movescript.Index).append("div").style("display","flex").classed("pre-wrap", true);
+				scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify(movescript,null,2).split('"Hitboxes": ')[0]);
+				scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({Hitboxes:movescript.Hitboxes},null,2)).style("background-color","#fee");
+				scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({Hurtboxes:movescript.Hurtboxes},null,2)).style("background-color","#efe");
+				if (movescript.Cancels) scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({Cancels:movescript.Cancels},null,2));
+				if (movescript.AutoCancels) scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({AutoCancels:movescript.AutoCancels},null,2));
+				if (movescript.PhysicsBoxes) scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({PhysicsBoxes:movescript.PhysicsBoxes},null,2)).style("background-color","#ffe");
+				if (movescript.Positions) scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({Positions:movescript.Positions},null,2));
+			}
+			SCRIPTBOX.append("div").text("MOVES");
+			SCRIPTBOX.append("ol").attr("id","MOVEOL").selectAll("li").data(data2.Moves.filter(function(a){return a != null})).enter()
+				.append("li").attr("id",function(d){return "MOVE"+d.Index}).text(function(d){return d.Name;}).attr("value", function(d){return d.Index;})
+				.on("click",function(d,i){
+					if (!HASHCLICK) UCHASH(charfile + "/MOVE/" + d.Index + "/" + d.Name);
+					// console.log(d);
+					SCRIPTBOX.selectAll("li.DIFF2").classed("DIFF2",false);
+					d3.select(this).classed("DIFF2",true);
+					FILEDIV.selectAll("*").remove();
+
+					FILEDIV.append("div").text("SCRIPT");
+					var fileol = FILEDIV.append("ol");
+					var movescript = data1.MoveLists[d.Unknown8 == 2 ? 1 : 0].Moves[d.ScriptIndex] || data1.MoveLists[0].Moves[d.ScriptIndex];
+					UCSCRIPTTABLE(movescript, fileol);
+
+					FILEDIV.append("div").text("MOVE");
+					var fileol = FILEDIV.append("ol");
+					fileol.append("li").text(JSON.stringify(d,null,2)).attr("value",d.Index);
+					if (d.InputMotionIndex >= 0) {
+						var moveinput = data2.Inputs[d.InputMotionIndex];
+						FILEDIV.append("div").text("INPUT");
+						var fileol = FILEDIV.append("ol");
+						fileol.append("li").text(JSON.stringify(moveinput,null,2).split("\"InputEntries\": ")[0] + "\"InputEntries\": [ ... ]").attr("value",moveinput.Index);
+						// fileol.append("li").text(JSON.stringify(d,null,2)).attr("value",moveinput.Index).classed("pre-wrap",true);
+
+						FILEDIV.append("div").text("INPUT ENTRY");
+						var fileol = FILEDIV.append("ol");
+						var inputdiv = fileol.append("li").attr("value",moveinput.Index).append("div").style("display","flex").classed("pre-wrap", true);
+						if (moveinput.InputEntries != null)
+						moveinput.InputEntries.forEach(function(input){
+							inputdiv.append("div").classed("pre-wrap", true).text(JSON.stringify(input,null,2));	
+						});
+					}
+					FILEDIV.append("div").text("SCRIPT");
+					var fileol = FILEDIV.append("ol");
+					var movescript = data1.MoveLists[d.Unknown8 == 2 ? 1 : 0].Moves[d.ScriptIndex] || data1.MoveLists[0].Moves[d.ScriptIndex];
+					UCSCRIPT(movescript, fileol);
+				});
+			SCRIPTBOX.append("div").text("CHARGES");
+			SCRIPTBOX.append("ol").attr("id","CHARGEOL").selectAll("li").data(data2.Charges.filter(function(a){return a != null})).enter()
+				.append("li").attr("id",function(d){return "CHARGE"+d.Index}).text(function(d){return d.InputString + " " + d.ChargeFrames + "F";}).attr("value", function(d){return d.Index;})
+				.on("click",function(d,i){
+					if (!HASHCLICK) UCHASH(charfile + "/CHARGE/" + d.Index);
+					// console.log(d);
+					SCRIPTBOX.selectAll("li.DIFF2").classed("DIFF2",false);
+					d3.select(this).classed("DIFF2",true);
+					FILEDIV.selectAll("*").remove();
+					FILEDIV.append("div").text("CHARGE");
+					var fileol = FILEDIV.append("ol");
+					fileol.append("li").text(JSON.stringify(d,null,2)).attr("value",d.Index);
+					fileol.append("li").text(JSON.stringify(d,null,2)).attr("value",d.Index).classed("pre-wrap",true);
+				});
+			SCRIPTBOX.append("div").text("INPUTS");
+			SCRIPTBOX.append("ol").attr("id","INPUTOL").selectAll("li").data(data2.Inputs.filter(function(a){return a != null})).enter()
+				.append("li").attr("id",function(d){return "INPUT"+d.Index}).text(function(d){return d.Name || "[" + d.InputEntries.length + "]";}).attr("value", function(d){return d.Index;})
+				.on("click",function(d,i){
+					if (!HASHCLICK) UCHASH(charfile + "/INPUT/" + d.Index);
+					// console.log(d);
+					SCRIPTBOX.selectAll("li.DIFF2").classed("DIFF2",false);
+					d3.select(this).classed("DIFF2",true);
+					FILEDIV.selectAll("*").remove();
+					FILEDIV.append("div").text("INPUT");
+					var fileol = FILEDIV.append("ol");
+					fileol.append("li").text(JSON.stringify(d,null,2)).attr("value",d.Index);
+					// fileol.append("li").text(JSON.stringify(d,null,2)).attr("value",d.Index).classed("pre-wrap",true);
+
+					FILEDIV.append("div").text("INPUT ENTRY");
+					var fileol = FILEDIV.append("ol");
+					var inputdiv = fileol.append("li").attr("value",d.Index).append("div").style("display","flex").classed("pre-wrap", true);
+					if (d.InputEntries != null)
+					d.InputEntries.forEach(function(input){
+						inputdiv.append("div").classed("pre-wrap", true).text(JSON.stringify(input,null,2));	
+					});
+
+					FILEDIV.append("div").text("MOVE");
+					var fileol = FILEDIV.append("ol");
+					data2.Moves.forEach(function(move, index) {
+						if (move == null) return;
+						if (move.InputMotionIndex != d.Index) return;
+						fileol.append("li").text(JSON.stringify({ Name: move.Name, Move: move },null,2)).attr("value", move.Index);
+					});
+
+				});
+			SCRIPTBOX.append("div").text("CANCEL LISTS");
+			SCRIPTBOX.append("ol").attr("id","CANCELOL").selectAll("li").data(data2.CancelLists.filter(function(a){return a.Cancels != null})).enter()
+				.append("li").attr("id",function(d){return "CANCEL"+d.Index}).text(function(d){return d.CancelIndexNames.replace(/.* Names: /,"");}).attr("value", function(d){return d.Index;})
+				.on("click",function(d,i){
+					if (!HASHCLICK) UCHASH(charfile + "/CANCEL/" + d.Index);
+					// console.log(d);
+					SCRIPTBOX.selectAll("li.DIFF2").classed("DIFF2",false);
+					d3.select(this).classed("DIFF2",true);
+					FILEDIV.selectAll("*").remove();
+					FILEDIV.append("div").text("CANCEL LIST");
+					var fileol = FILEDIV.append("ol");
+					fileol.append("li").text(JSON.stringify(d,null,2).split("\"Cancels\": ")[0] + " \"Cancels\": [ ... ]").attr("value",d.Index);
+
+					FILEDIV.append("div").text("SCRIPT AUTOCANCEL");
+					var fileol = FILEDIV.append("ol");
+					data1.MoveLists.forEach(function(ML){
+						ML.Moves.forEach(function(move, index) {
+							if (move == null) return;
+							if (move.AutoCancels == null) return;
+							move.AutoCancels.forEach(function(cancel, index){
+								if (cancel.CancelList != d.Index) return;
+								fileol.append("li").text(JSON.stringify({ Name: move.Name, Cancel: cancel },null,2)).attr("value", move.Index);
+								// console.log(cancel);
+							});
+						});
+					});	
+					FILEDIV.append("div").text("SCRIPT CANCEL");
+					var fileol = FILEDIV.append("ol");
+					data1.MoveLists.forEach(function(ML){
+						ML.Moves.forEach(function(move, index) {
+							if (move == null) return;
+							if (move.Cancels == null) return;
+							move.Cancels.forEach(function(cancel, index){
+								if (cancel.CancelList != d.Index) return;
+								fileol.append("li").text(JSON.stringify({ Name: move.Name, Cancel: cancel },null,2)).attr("value", move.Index);
+								// console.log(cancel);
+							});
+						});
+					});
+
+					FILEDIV.append("div").text("CANCEL " + d.Cancels.length);
+					var fileol = FILEDIV.append("ol");
+					// var cancellist = fileol.append("li").attr("value",d.Index).classed("pre-wrap", true);
+					// var canceldiv = fileol.append("li").attr("value",d.Index).append("div").style("display","flex").classed("pre-wrap", true);
+					if (d.Cancels != null)
+					d.Cancels.forEach(function(cancel){
+						fileol.append("li").attr("value",cancel.Index).classed("pre-wrap", true).text(JSON.stringify(cancel,null,2));	
+					});
+				});
+
+			var hitboxes = {};
+			var hitboxesall = {};
+			data1.MoveLists.forEach(function(ML){
+				ML.Moves.forEach(function(move, index) {
+					if (move == null) return;
+					if (move.Hitboxes == null) return;
+					move.Hitboxes.forEach(function(hitbox, index){
+						if (hitboxes[hitbox.HitboxEffectIndex] == null) {
+							hitboxes[hitbox.HitboxEffectIndex] = move.Name;
+							hitboxesall[hitbox.HitboxEffectIndex] = move.Name;
+						}
+						else
+							hitboxesall[hitbox.HitboxEffectIndex] += ", " + move.Name;
+					});
+				});
+			});
+
+			SCRIPTBOX.append("div").text("HITBOX EFFECTS");
+			SCRIPTBOX.append("ol").attr("id","HITBOXEFFECTOL").selectAll("li").data(data1.HitboxEffectses.filter(function(a){return a.HIT_STAND != null})).enter()
+				.append("li").attr("id",function(d){return "EFFECT"+d.Index}).text(function(d){return hitboxesall[d.Index];}).attr("value", function(d){return d.Index;})
+				.on("click",function(d,i){
+					if (!HASHCLICK) UCHASH(charfile + "/EFFECT/" + d.Index);
+					// console.log(d);
+					SCRIPTBOX.selectAll("li.DIFF2").classed("DIFF2",false);
+					d3.select(this).classed("DIFF2",true);
+					FILEDIV.selectAll("*").remove();
+
+					FILEDIV.append("div").text("HITBOX EFFECT");
+					var fileol = FILEDIV.append("ol");
+					var effectdiv = fileol.append("li").attr("value",d.Index).append("div").style("display","flex").classed("pre-wrap", true);
+					effectdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({HIT_STAND:d.HIT_STAND},null,2)).style("background-color","#fee");
+					effectdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({COUNTERHIT_STAND:d.COUNTERHIT_STAND},null,2)).style("background-color","#ffe");
+					effectdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({GUARD_STAND:d.GUARD_STAND},null,2)).style("background-color","#efe");
+
+					FILEDIV.append("div").text("SCRIPT HITBOX");
+					data1.MoveLists.forEach(function(ML,mli){
+						if (mli == 1) FILEDIV.append("div").text("SCRIPTS VT HITBOX");
+						var fileol = FILEDIV.append("ol");
+						ML.Moves.forEach(function(move, index) {
+							if (move == null) return;
+							if (move.Hitboxes == null) return;
+							move.Hitboxes.forEach(function(hitbox, index){
+								if (hitbox.HitboxEffectIndex == d.Index) {
+									fileol.append("li").text(JSON.stringify({Name:move.Name,Hitbox:hitbox},null,2)).attr("value",move.Index);//.classed("pre-wrap",true);
+								}
+							});
+						});
+					});
+
+					FILEDIV.append("div").text("HITBOX EFFECT");					
+					var fileol = FILEDIV.append("ol");
+					fileol.append("li").text(JSON.stringify(d,null,2)).attr("value",d.Index).classed("pre-wrap",true);
+				});
+
+			SCRIPTBOX.append("div").text("SCRIPTS");
+			data1.MoveLists.forEach(function(ML,mli){
+				if (mli == 1) SCRIPTBOX.append("div").text("SCRIPTS VT");
+				SCRIPTBOX.append("ol").attr("id","SCRIPTOL").selectAll("li").data(ML.Moves.filter(function(a){return a != null})).enter()
+					.append("li").attr("id",function(d){return "SCRIPT"+(mli==1?"VT":"")+d.Index;}).text(function(d){return d.Name;}).attr("value", function(d){return d.Index;})
+					.on("click",function(d,i){						
+						if (!HASHCLICK) UCHASH(charfile + "/SCRIPT/" + (mli==1?"VT":"") + d.Index + (d.Index != d.Name ? "/" + d.Name : ""));
+						// console.log(d);
+						SCRIPTBOX.selectAll("li.DIFF2").classed("DIFF2",false);
+						d3.select(this).classed("DIFF2",true);
+						FILEDIV.selectAll("*").remove();
+
+						FILEDIV.append("div").text("SCRIPT");
+						var fileol = FILEDIV.append("ol");
+						UCSCRIPTTABLE(d, fileol);
+
+						FILEDIV.append("div").text("SCRIPT");
+						var fileol = FILEDIV.append("ol");
+						fileol.append("li").text(JSON.stringify(d,null,2).split("\"AutoCancels\":")[0]).attr("value",d.Index);
+						UCSCRIPT(d, fileol);
+					});
+			});
+
+			if (HASHNAME != null && HASHINDEX != null) {
+				d3.select("#"+HASHNAME+HASHINDEX).node().scrollIntoView();
+				d3.select("#"+HASHNAME+HASHINDEX).node().click();
+			}
+			HASHCLICK = false;
+		});
+	});
+});
+d3.select("#JSONDIV").append("span").text("BAC DIFF");	
 d3.select("#JSONDIV").append("ul").attr("id","BACUL").selectAll("li").data(CHARBAC).enter().append("li").text(function(d){return d;}).on("click",function(d,i){
 	if (i>=CHARBAC.length-1) return;
 	UCHASH(d);
@@ -146,7 +534,7 @@ d3.select("#JSONDIV").append("ul").attr("id","BACUL").selectAll("li").data(CHARB
 		});
 	});
 });
-d3.select("#JSONDIV").append("span").text("BCM");
+d3.select("#JSONDIV").append("span").text("BCM DIFF");
 d3.select("#JSONDIV").append("ul").attr("id","BCMUL").selectAll("li").data(CHARBCM).enter().append("li").text(function(d){return d;}).on("click",function(d,i){
 	if (i>=CHARBCM.length-1) return;
 	UCHASH(d);
@@ -214,6 +602,7 @@ d3.select("#JSONDIV").append("ul").attr("id","BCMUL").selectAll("li").data(CHARB
 				}}).diff(bcm1.CancelLists[datakey], bcm2.CancelLists[datakey]);
 				var diff2 = jsondiffpatch.formatters.html.format(delta2,bcm1.CancelLists[datakey]);
 				document.getElementById('SCRIPT').innerHTML = "<span class=\"DIFF1\">" + CHARBCM[i] + "</span> <span class=\"DIFF2\">" + CHARBCM[i+1] + "</span>" + "<br><br><span class=\"DIFF3\">" + datakey + ": </span>";
+				// document.getElementById('SCRIPT').innerHTML += "<br><br>" + bcm1.CancelLists[datakey].CancelIndexNames;
 				document.getElementById('SCRIPT').innerHTML += "<br><br>" + diff2;
 			}
 		});
@@ -295,7 +684,8 @@ function UCHASH(h) {
 	window.location.hash = "#" + h.replace(".json","");
 }
 function MECHASH() {
-	var h = window.location.hash.substr(1).replace(".json","");
+	var hash = window.location.hash.substr(1).replace(".json","").split("/");
+	var h = hash[0];
 	var i = CHARBAC.indexOf(h);
 	if (i > -1) {
 		d3.select("#BACUL").select("li:nth-child("+(i+1)+")").node().click();
@@ -304,6 +694,15 @@ function MECHASH() {
 	i = CHARBCM.indexOf(h);
 	if (i > -1) {
 		d3.select("#BCMUL").select("li:nth-child("+(i+1)+")").node().click();
+	}
+	i = CHARFILE.indexOf(h);
+	if (i > -1) {
+		if (hash.length >= 3) {
+			HASH.NAME = hash[1];
+			HASH.INDEX = hash[2];
+		}
+		HASH.CLICK = true;
+		d3.select("#CHARUL").select("li:nth-child("+(i+1)+")").node().click();
 	}
 }
 MECHASH();

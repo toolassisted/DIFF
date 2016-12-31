@@ -271,12 +271,53 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 			var FILEDIV = DIFFBOX.append("div").attr("id","FILEDIV");
 
 			function UCSCRIPTTABLE(movescript, fileol) {
-				var stagelist = fileol.append("li").attr("value",0).classed("pre-wrap", true);
+				var stagelist = fileol.append("li").attr("value",1).classed("pre-wrap", true);
 				var stagediv = stagelist.append("div");
 				var stagesvg = stagediv.append("svg").attr("id","STAGESVG").style("background-color","#000");
 				stagesvg.append("line").attr("x1",100).attr("x2",100).attr("y1",350-0).attr("y2",350+50);
 				stagesvg.append("line").attr("x1",0).attr("x2",2000).attr("y1",350).attr("y2",350);
-
+				var stagetext = stagesvg.append("g");
+				stagetext.append("text").attr("x",110).attr("y",400).attr("fill","#999").text("U SCROLL U C HIT BOX");
+				UCHITBOX(1);
+				function UCHITBOX(stageframe) {
+					stagesvg.selectAll("g").remove();
+					var stageg = stagesvg.append("g").attr("transform","translate(100,350)");				
+					stageg.append("line").attr("x1",0).attr("x2",0).attr("y1",-7).attr("y2",+7);
+					stageg.append("line").attr("x1",-7).attr("x2",+7).attr("y1",0).attr("y2",0);
+					if (movescript.Hitboxes != null)
+					movescript.Hitboxes.forEach(function(hitbox, index){
+						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+							if (hitbox.HitType == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
+							if (hitbox.HitType == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
+							if (hitbox.HitType == 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HIT", true);
+							if (hitbox.HitType == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROJ", true);
+							if (hitbox.HitType == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("THROW", true);
+						}
+					});
+					if (movescript.Hurtboxes != null)
+					movescript.Hurtboxes.forEach(function(hitbox, index){
+						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+							if ((hitbox.Flag1 & 3) == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-HIT", true);
+							if ((hitbox.Flag1 & 3) == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-STRIKE", true);
+							if ((hitbox.Flag1 & 3) == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-PROJ", true);
+							if ((hitbox.Flag1 & 4) == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-THROW", true);
+							if (hitbox.HitEffect > 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-ARMOR", true);
+							
+						}
+					});
+					if (movescript.PhysicsBoxes != null)
+					movescript.PhysicsBoxes.forEach(function(hitbox, index){
+						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+							stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PUSH",true);
+						}
+					});
+					if (movescript.Positions != null)
+					movescript.Positions.forEach(function(hitbox, index){
+						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+							if (hitbox.Flag == 32768) stageg.attr("transform","translate("+(100+hitbox.Movement*100)+",350)");
+						}
+					});
+				}
 				//fileol.attr("id","FRAMETABLEOL");//style("width","50em").style("overflow","auto");
 				var scriptlist = fileol.append("li").attr("value",movescript.Index).classed("pre-wrap", true);
 				var ticks = movescript.TotalTicks;
@@ -295,44 +336,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 						if (stageframe > frames) stageframe = frames;
 						if (stageframe == stagelist.attr("value")) return;						
 						stagelist.attr("value", stageframe); // console.log(stageframe); console.log(this.scrollLeft + "/" + start + "/" + end + "/" + width + "/" + frames); 
-
-						stagesvg.selectAll("g").remove();
-						var stageg = stagesvg.append("g").attr("transform","translate(100,350)");				
-						stageg.append("line").attr("x1",0).attr("x2",0).attr("y1",-7).attr("y2",+7);
-						stageg.append("line").attr("x1",-7).attr("x2",+7).attr("y1",0).attr("y2",0);
-						if (movescript.Hitboxes != null)
-						movescript.Hitboxes.forEach(function(hitbox, index){
-							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
-								if (hitbox.HitType == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
-								if (hitbox.HitType == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
-								if (hitbox.HitType == 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HIT", true);
-								if (hitbox.HitType == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROJ", true);
-								if (hitbox.HitType == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("THROW", true);
-							}
-						});
-						if (movescript.Hurtboxes != null)
-						movescript.Hurtboxes.forEach(function(hitbox, index){
-							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
-								if ((hitbox.Flag1 & 3) == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-HIT", true);
-								if ((hitbox.Flag1 & 3) == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-STRIKE", true);
-								if ((hitbox.Flag1 & 3) == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-PROJ", true);
-								if ((hitbox.Flag1 & 4) == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-THROW", true);
-								if (hitbox.HitEffect > 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-ARMOR", true);
-								
-							}
-						});
-						if (movescript.PhysicsBoxes != null)
-						movescript.PhysicsBoxes.forEach(function(hitbox, index){
-							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
-								stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PUSH",true);
-							}
-						});
-						if (movescript.Positions != null)
-						movescript.Positions.forEach(function(hitbox, index){
-							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
-								if (hitbox.Flag == 32768) stageg.attr("transform","translate("+(100+hitbox.Movement*100)+",350)");
-							}
-						});
+						UCHITBOX(stageframe);
 					});
 				var frametable = framediv.append("table").attr("id","FRAMETABLE").style("padding-right","95%");
 				var framehead = frametable.append("thead").append("tr").style("color","#ccc");

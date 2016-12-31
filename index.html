@@ -125,7 +125,87 @@
 		.UNOC {
 			display: none;
 		}
-
+		#STAGESVG {
+			width: 100%;
+			height: 400px;
+			/*vertical-align: top;*/
+		}
+		#STAGESVG line {
+			stroke-width: 1px;
+			stroke: #999;
+			fill: #ddd;
+			vector-effect: non-scaling-stroke;
+		}
+		rect.PUSH {
+			/*stroke-width: 1px;*/
+			/*stroke: #990;*/
+			fill: #330;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
+		rect.PROX {
+			stroke-width: 1px;
+			stroke: #333;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
+		rect.HIT {
+			stroke-width: 1px;
+			stroke: #900;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
+		rect.PROJ {
+			stroke-width: 1px;
+			stroke: #632;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
+		rect.THROW {
+			stroke-width: 1px;
+			stroke: #33f;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
+		rect.HURT-HIT {
+			stroke-width: 1px;
+			stroke: #090;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
+		rect.HURT-STRIKE {
+			stroke-width: 1px;
+			stroke: #963;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
+		rect.HURT-PROJ {
+			stroke-width: 1px;
+			stroke: #909;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
+		rect.HURT-THROW {
+			stroke-width: 1px;
+			stroke: #099;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
+		rect.HURT-ARMOR {
+			stroke-width: 5px;
+			stroke: #606;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
 	</style>
 </head>
 <body>
@@ -191,17 +271,74 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 			var FILEDIV = DIFFBOX.append("div").attr("id","FILEDIV");
 
 			function UCSCRIPTTABLE(movescript, fileol) {
+				var stagelist = fileol.append("li").attr("value",0).classed("pre-wrap", true);
+				var stagediv = stagelist.append("div");
+				var stagesvg = stagediv.append("svg").attr("id","STAGESVG").style("background-color","#000");
+				stagesvg.append("line").attr("x1",100).attr("x2",100).attr("y1",350-0).attr("y2",350+50);
+				stagesvg.append("line").attr("x1",0).attr("x2",2000).attr("y1",350).attr("y2",350);
+
 				//fileol.attr("id","FRAMETABLEOL");//style("width","50em").style("overflow","auto");
 				var scriptlist = fileol.append("li").attr("value",movescript.Index).classed("pre-wrap", true);
 				var ticks = movescript.TotalTicks;
 				var IASA = movescript.InterruptFrame == -1 ? ticks : (movescript.InterruptFrame+1);
 
-				var frametable = scriptlist.append("div").append("table").attr("id","FRAMETABLE");
+				var framediv = scriptlist.append("div").style("overflow-x","scroll").on("scroll",function() {
+						var iasarow = d3.select("#FRAME-IASA");
+						var start = iasarow.select("td").node().offsetLeft;
+						var end = iasarow.select("td:last-child").node().offsetLeft;
+						var frames = iasarow.selectAll("td").size();
+						var width = (end - start) / (frames-1);
+						var stageframe = 1;
+						// stageframe = 
+						stageframe = Math.floor(this.scrollLeft / width + 1);
+						if (stageframe < 1) stageframe = 1;
+						if (stageframe > frames) stageframe = frames;
+						if (stageframe == stagelist.attr("value")) return;						
+						stagelist.attr("value", stageframe); // console.log(stageframe); console.log(this.scrollLeft + "/" + start + "/" + end + "/" + width + "/" + frames); 
+
+						stagesvg.selectAll("g").remove();
+						var stageg = stagesvg.append("g").attr("transform","translate(100,350)");				
+						stageg.append("line").attr("x1",0).attr("x2",0).attr("y1",-7).attr("y2",+7);
+						stageg.append("line").attr("x1",-7).attr("x2",+7).attr("y1",0).attr("y2",0);
+						if (movescript.Hitboxes != null)
+						movescript.Hitboxes.forEach(function(hitbox, index){
+							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+								if (hitbox.HitType == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
+								if (hitbox.HitType == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
+								if (hitbox.HitType == 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HIT", true);
+								if (hitbox.HitType == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROJ", true);
+								if (hitbox.HitType == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("THROW", true);
+							}
+						});
+						if (movescript.Hurtboxes != null)
+						movescript.Hurtboxes.forEach(function(hitbox, index){
+							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+								if ((hitbox.Flag1 & 3) == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-HIT", true);
+								if ((hitbox.Flag1 & 3) == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-STRIKE", true);
+								if ((hitbox.Flag1 & 3) == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-PROJ", true);
+								if ((hitbox.Flag1 & 4) == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-THROW", true);
+								if (hitbox.HitEffect > 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-ARMOR", true);
+								
+							}
+						});
+						if (movescript.PhysicsBoxes != null)
+						movescript.PhysicsBoxes.forEach(function(hitbox, index){
+							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+								stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PUSH",true);
+							}
+						});
+						if (movescript.Positions != null)
+						movescript.Positions.forEach(function(hitbox, index){
+							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+								if (hitbox.Flag == 32768) stageg.attr("transform","translate("+(100+hitbox.Movement*100)+",350)");
+							}
+						});
+					});
+				var frametable = framediv.append("table").attr("id","FRAMETABLE").style("padding-right","95%");
 				var framehead = frametable.append("thead").append("tr").style("color","#ccc");
 				var framebody = frametable.append("tbody").style("color","#999");
 				// framehead.append("th").text("FRAME"); framehead.selectAll("td").data(d3.range(1,ticks+1)).enter().append("td").text(function(d){return d;});//.style("width","1.5em");
-				var framerow = framebody.append("tr"); framerow.append("th").text("IASA"); framerow.selectAll("td").data(d3.range(1,IASA+1)).enter().append("td").text(function(d){return d;});
-
+				var framerow = framebody.append("tr").attr("id","FRAME-IASA"); framerow.append("th").text("IASA"); framerow.selectAll("td").data(d3.range(1,ticks+1)).enter().append("td").text(function(d){return d;}); frametable.selectAll("#FRAME-IASA td").data(d3.range(IASA+1,ticks+1), function(d){return d;}).style("color", "#eee");
 				var framerow = framebody.append("tr").attr("id","FRAME-PROX"); framerow.append("th").text("PROXIMITY"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
 				var framerow = framebody.append("tr").attr("id","FRAME-HIT"); framerow.append("th").text("HIT"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});					
 				var framerow = framebody.append("tr").attr("id","FRAME-PROJ"); framerow.append("th").text("PROJ"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
@@ -245,6 +382,23 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					framerow.selectAll("td").data(d3.range(cancel.TickStart+1,cancel.TickEnd+1), function(d){return d;}).style("background-color",bgcolor).text(cancel.MoveIndex);
 					fileol.append("div").classed("CANCELDIV",true).text("* " + "AutoCancel MoveIndex: " + cancel.MoveIndex + ", Condition: " + cancel.Condition);
 				});
+				if (movescript.Others != null)
+				movescript.Others.forEach(function(other, index){
+					if (other.Unknown2 != 3) return;
+					var bgcolor = "#fdd";
+					var framerow = framebody.append("tr").attr("id","FRAME-OTHER"); framerow.append("th").text("EFFECT PROJ"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+					framerow.selectAll("td").data(d3.range(other.TickStart+1,other.TickEnd+1), function(d){return d;}).style("background-color",bgcolor);//.text(other.MoveIndex);
+					// fileol.append("div").classed("CANCELDIV",true).text("* " + "Other: " + other.MoveIndex + ", Condition: " + other.Condition);
+				});			
+				if (movescript.Others != null)
+				movescript.Others.forEach(function(other, index){
+					if (other.Unknown1 != 1 || other.Unknown2 != 0) return;
+					if (other.Ints[1] != other.Ints[2]) return;
+					var bgcolor = "#ddf";
+					var framerow = framebody.append("tr").attr("id","FRAME-FREEZE"); framerow.append("th").text("FREEZE"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+					framerow.selectAll("td").data(d3.range(other.TickStart+1,other.TickEnd+1+other.Ints[1]+1), function(d){return d;}).style("background-color",bgcolor);//.text(other.TickStart+1);
+					// fileol.append("div").classed("CANCELDIV",true).text("* " + "Other: " + other.MoveIndex + ", Condition: " + other.Condition);
+				});
 			}
 			function UCSCRIPT(movescript, fileol) {
 				var scriptdiv = fileol.append("li").attr("value",movescript.Index).append("div").style("display","flex").classed("pre-wrap", true);
@@ -255,6 +409,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 				if (movescript.AutoCancels) scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({AutoCancels:movescript.AutoCancels},null,2));
 				if (movescript.PhysicsBoxes) scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({PhysicsBoxes:movescript.PhysicsBoxes},null,2)).style("background-color","#ffe");
 				if (movescript.Positions) scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({Positions:movescript.Positions},null,2));
+				if (movescript.Others) scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({Others:movescript.Others},null,2));
 			}
 			SCRIPTBOX.append("div").text("MOVES");
 			SCRIPTBOX.append("ol").attr("id","MOVEOL").selectAll("li").data(data2.Moves.filter(function(a){return a != null})).enter()

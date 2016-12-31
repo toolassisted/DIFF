@@ -311,12 +311,15 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 							stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PUSH",true);
 						}
 					});
-					if (movescript.Positions != null)
-					movescript.Positions.forEach(function(hitbox, index){
-						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
-							if (hitbox.Flag == 32768) stageg.attr("transform","translate("+(100+hitbox.Movement*100)+",350)");
-						}
-					});
+					if (movescript.Positions != null) {
+						var movex = 0;
+						movescript.Positions.forEach(function(hitbox, index){
+							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+								if (hitbox.Flag == 32768) movex += hitbox.Movement;
+							}
+						});
+						stageg.attr("transform","translate("+(100+movex*100)+",350)");
+					}
 				}
 				//fileol.attr("id","FRAMETABLEOL");//style("width","50em").style("overflow","auto");
 				var scriptlist = fileol.append("li").attr("value",movescript.Index).classed("pre-wrap", true);

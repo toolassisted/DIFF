@@ -101,6 +101,10 @@
 			font-family: monospace;
 			/*overflow: auto;*/
 		}
+		#FRAMETABLE tr:first-child th {
+			/*position: fixed;*/
+			/*background-color: #fff;*/
+		}
 		#FRAMETABLE td {
 			min-width: 2em;
 			text-align: center;
@@ -109,6 +113,7 @@
 		#FRAMETABLE th {
 			white-space: nowrap;
 			min-width: 7em;
+			font-weight: normal;
 		}
 		.CANCELDIV {
 			font-family: monospace;
@@ -270,15 +275,22 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 
 			var FILEDIV = DIFFBOX.append("div").attr("id","FILEDIV");
 
-			function UCSCRIPTTABLE(movescript, fileol) {
+			function UCSCRIPTTABLE(movescript, FILEDIV) {				
+				var scriptdiv = FILEDIV.append("div").text("SCRIPT");
+				var zoomdiv = scriptdiv.append("div").style("float","right");
+				zoomdiv.append("span").text("SCALE ");
+				zoomdiv.append("button").text("1.0").on("click",function(){stagesvg.style("transform","scale(1.0)")});
+				zoomdiv.append("button").text("1.5").on("click",function(){stagesvg.style("transform","scale(1.5)")});
+				zoomdiv.append("button").text("2.0").on("click",function(){stagesvg.style("transform","scale(2.0)")});
+				var fileol = FILEDIV.append("ol");
 				var stagelist = fileol.append("li").attr("value",1).classed("pre-wrap", true);
-				var stagediv = stagelist.append("div");
-				var stagesvg = stagediv.append("svg").attr("id","STAGESVG").style("background-color","#000");
+				var stagediv = stagelist.append("div");//.style("overflow","auto");
+				var stagesvg = stagediv.append("svg").attr("id","STAGESVG").style("background-color","#000").append("g").style("transform-origin","100px 350px").style("transform","scale(1)");
 				stagesvg.append("line").attr("x1",100).attr("x2",100).attr("y1",350-0).attr("y2",350+50);
 				stagesvg.append("line").attr("x1",0).attr("x2",2000).attr("y1",350).attr("y2",350);
-				var stagetext = stagesvg.append("g");
-				stagetext.append("text").attr("x",110).attr("y",400).attr("fill","#999").text("U SCROLL U C HIT BOX");
 				UCHITBOX(1);
+				var stagetext = stagesvg.append("g");
+				stagetext.append("text").attr("x",110).attr("y",400).attr("fill","#999").text("U SCROLL >");
 				function UCHITBOX(stageframe) {
 					stagesvg.selectAll("g").remove();
 					var stageg = stagesvg.append("g").attr("transform","translate(100,350)");				
@@ -397,15 +409,17 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					framerow.selectAll("td").data(d3.range(other.TickStart+1,other.TickEnd+1), function(d){return d;}).style("background-color",bgcolor);//.text(other.MoveIndex);
 					// fileol.append("div").classed("CANCELDIV",true).text("* " + "Other: " + other.MoveIndex + ", Condition: " + other.Condition);
 				});			
-				if (movescript.Others != null)
-				movescript.Others.forEach(function(other, index){
-					if (other.Unknown1 != 1 || other.Unknown2 != 0) return;
-					if (other.Ints[1] != other.Ints[2]) return;
-					var bgcolor = "#ddf";
-					var framerow = framebody.append("tr").attr("id","FRAME-FREEZE"); framerow.append("th").text("FREEZE"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
-					framerow.selectAll("td").data(d3.range(other.TickStart+1,other.TickEnd+1+other.Ints[1]+1), function(d){return d;}).style("background-color",bgcolor);//.text(other.TickStart+1);
-					// fileol.append("div").classed("CANCELDIV",true).text("* " + "Other: " + other.MoveIndex + ", Condition: " + other.Condition);
-				});
+				// if (movescript.Others != null)
+				// movescript.Others.forEach(function(other, index){
+				// 	if (other.Unknown1 != 1 || other.Unknown2 != 0) return;
+				// 	// if (other.Ints[1] != other.Ints[2]) return;
+				// 	if (other.Ints[3] != 0) return;
+				// 	var bgcolor = "#ddf";
+				// 	var framerow = framebody.append("tr").attr("id","FRAME-FREEZE"); framerow.append("th").text("FREEZE"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
+				// 	framerow.selectAll("td").data(d3.range(other.TickStart+1,other.TickEnd+1+other.Ints[2]+Math.floor(other.Ints[2]/other.Ints[1])), function(d){return d;}).style("background-color",bgcolor);//.text(other.TickStart+1);
+				// 	framerow.selectAll("td").data(d3.range(other.TickEnd+1+other.Ints[2]+Math.floor(other.Ints[2]/other.Ints[1]),ticks+1), function(d){return d;}).text(function(d,i){return i+1+other.TickStart;});
+				// 	// fileol.append("div").classed("CANCELDIV",true).text("* " + "Other: " + other.MoveIndex + ", Condition: " + other.Condition);
+				// });
 			}
 			function UCSCRIPT(movescript, fileol) {
 				var scriptdiv = fileol.append("li").attr("value",movescript.Index).append("div").style("display","flex").classed("pre-wrap", true);
@@ -419,7 +433,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 				if (movescript.Others) scriptdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({Others:movescript.Others},null,2));
 			}
 			SCRIPTBOX.append("div").text("MOVES");
-			SCRIPTBOX.append("ol").attr("id","MOVEOL").selectAll("li").data(data2.Moves.filter(function(a){return a != null})).enter()
+			SCRIPTBOX.append("ol").attr("id","MOVEOL").selectAll("li").data(data2.Moves.filter(function(a){return a != null;})).enter()
 				.append("li").attr("id",function(d){return "MOVE"+d.Index}).text(function(d){return d.Name;}).attr("value", function(d){return d.Index;})
 				.on("click",function(d,i){
 					if (!HASHCLICK) UCHASH(charfile + "/MOVE/" + d.Index + "/" + d.Name);
@@ -428,10 +442,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					d3.select(this).classed("DIFF2",true);
 					FILEDIV.selectAll("*").remove();
 
-					FILEDIV.append("div").text("SCRIPT");
-					var fileol = FILEDIV.append("ol");
 					var movescript = data1.MoveLists[d.Unknown8 == 2 ? 1 : 0].Moves[d.ScriptIndex] || data1.MoveLists[0].Moves[d.ScriptIndex];
-					UCSCRIPTTABLE(movescript, fileol);
+					UCSCRIPTTABLE(movescript, FILEDIV);
 
 					FILEDIV.append("div").text("MOVE");
 					var fileol = FILEDIV.append("ol");
@@ -439,16 +451,26 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					if (d.InputMotionIndex >= 0) {
 						var moveinput = data2.Inputs[d.InputMotionIndex];
 						FILEDIV.append("div").text("INPUT");
-						var fileol = FILEDIV.append("ol");
-						fileol.append("li").text(JSON.stringify(moveinput,null,2).split("\"InputEntries\": ")[0] + "\"InputEntries\": [ ... ]").attr("value",moveinput.Index);
+						var fileol = FILEDIV.append("ol").style("overflow-x", "auto");
+						fileol.append("li").text(JSON.stringify(moveinput,null,2).split("\"InputEntries\": ")[0] + "\"InputEntries\": [ ... ]").attr("value",moveinput.Index);//.style("white-space", "nowrap");
 						// fileol.append("li").text(JSON.stringify(d,null,2)).attr("value",moveinput.Index).classed("pre-wrap",true);
 
-						FILEDIV.append("div").text("INPUT ENTRY");
-						var fileol = FILEDIV.append("ol");
-						var inputdiv = fileol.append("li").attr("value",moveinput.Index).append("div").style("display","flex").classed("pre-wrap", true);
+						// FILEDIV.append("div").text("INPUT ENTRY");
+						// var fileol = FILEDIV.append("ol");
+						// var inputdiv = fileol.append("li").attr("value",moveinput.Index).append("div").style("display","flex").classed("pre-wrap", true);
+						// if (moveinput.InputEntries != null)
+						// moveinput.InputEntries.forEach(function(input){
+						// 	inputdiv.append("div").classed("pre-wrap", true).text(JSON.stringify(input,null,2));	
+						// });
 						if (moveinput.InputEntries != null)
-						moveinput.InputEntries.forEach(function(input){
-							inputdiv.append("div").classed("pre-wrap", true).text(JSON.stringify(input,null,2));	
+						moveinput.InputEntries.forEach(function(inputentry,entryindex){
+							if (inputentry.InputParts != null)
+							inputentry.InputParts.forEach(function(input,index){
+								if (entryindex % 2 == 0)
+									fileol.append("li").text(JSON.stringify(input,null,2)).attr("value",index+1).style("background-color","#ffe").style("white-space", "nowrap");	
+								else
+									fileol.append("li").text(JSON.stringify(input,null,2)).attr("value",index+1).style("white-space", "nowrap");	
+							});
 						});
 					}
 					FILEDIV.append("div").text("SCRIPT");
@@ -457,7 +479,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					UCSCRIPT(movescript, fileol);
 				});
 			SCRIPTBOX.append("div").text("CHARGES");
-			SCRIPTBOX.append("ol").attr("id","CHARGEOL").selectAll("li").data(data2.Charges.filter(function(a){return a != null})).enter()
+			SCRIPTBOX.append("ol").attr("id","CHARGEOL").selectAll("li").data(data2.Charges.filter(function(a){return a != null;})).enter()
 				.append("li").attr("id",function(d){return "CHARGE"+d.Index}).text(function(d){return d.InputString + " " + d.ChargeFrames + "F";}).attr("value", function(d){return d.Index;})
 				.on("click",function(d,i){
 					if (!HASHCLICK) UCHASH(charfile + "/CHARGE/" + d.Index);
@@ -471,7 +493,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					fileol.append("li").text(JSON.stringify(d,null,2)).attr("value",d.Index).classed("pre-wrap",true);
 				});
 			SCRIPTBOX.append("div").text("INPUTS");
-			SCRIPTBOX.append("ol").attr("id","INPUTOL").selectAll("li").data(data2.Inputs.filter(function(a){return a != null})).enter()
+			SCRIPTBOX.append("ol").attr("id","INPUTOL").selectAll("li").data(data2.Inputs.filter(function(a){return a != null;})).enter()
 				.append("li").attr("id",function(d){return "INPUT"+d.Index}).text(function(d){return d.Name || "[" + d.InputEntries.length + "]";}).attr("value", function(d){return d.Index;})
 				.on("click",function(d,i){
 					if (!HASHCLICK) UCHASH(charfile + "/INPUT/" + d.Index);
@@ -608,7 +630,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 			SCRIPTBOX.append("div").text("SCRIPTS");
 			data1.MoveLists.forEach(function(ML,mli){
 				if (mli == 1) SCRIPTBOX.append("div").text("SCRIPTS VT");
-				SCRIPTBOX.append("ol").attr("id","SCRIPTOL").selectAll("li").data(ML.Moves.filter(function(a){return a != null})).enter()
+				SCRIPTBOX.append("ol").attr("id","SCRIPTOL").selectAll("li").data(ML.Moves.filter(function(a){return a != null;})).enter()
 					.append("li").attr("id",function(d){return "SCRIPT"+(mli==1?"VT":"")+d.Index;}).text(function(d){return d.Name;}).attr("value", function(d){return d.Index;})
 					.on("click",function(d,i){						
 						if (!HASHCLICK) UCHASH(charfile + "/SCRIPT/" + (mli==1?"VT":"") + d.Index + (d.Index != d.Name ? "/" + d.Name : ""));
@@ -617,9 +639,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 						d3.select(this).classed("DIFF2",true);
 						FILEDIV.selectAll("*").remove();
 
-						FILEDIV.append("div").text("SCRIPT");
-						var fileol = FILEDIV.append("ol");
-						UCSCRIPTTABLE(d, fileol);
+						UCSCRIPTTABLE(d, FILEDIV);
 
 						FILEDIV.append("div").text("SCRIPT");
 						var fileol = FILEDIV.append("ol");

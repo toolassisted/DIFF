@@ -289,8 +289,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 				var stageroot = stagediv.append("svg").attr("id","STAGESVG").style("background-color","#000");
 				var stagestat = stageroot.append("text").attr("text-anchor","end");
 				var stagesvg = stageroot.append("g").style("transform-origin","100px 350px").style("transform","scale(1)");
-				stagesvg.append("line").attr("x1",100).attr("x2",100).attr("y1",350-0).attr("y2",350+50);
-				stagesvg.append("line").attr("x1",0).attr("x2",2000).attr("y1",350).attr("y2",350);
+				stageroot.append("line").attr("x1",100).attr("x2",100).attr("y1",350-0).attr("y2",350+50);
+				stageroot.append("line").attr("x1",0).attr("x2","98%").attr("y1",350).attr("y2",350);
 				UCHITBOX(1);
 				var stagetext = stagesvg.append("g");
 				stagetext.append("text").attr("x",110).attr("y",400).attr("fill","#999").text("U SCROLL >");

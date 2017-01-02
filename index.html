@@ -338,21 +338,51 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 							statpush = Math.max(statpush, hitbox.X+hitbox.Width);
 						}
 					});
+					var movex = 0;
+					var movey = 0;
 					if (movescript.Positions != null) {
-						var movex = 0;
 						movescript.Positions.forEach(function(hitbox, index){
 							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
 								if (hitbox.Flag == 32768) movex += hitbox.Movement;
 							}
 						});
-						stageg.attr("transform","translate("+(100+movex*100)+",350)");
 					}
-					stagestat.selectAll("*").remove();
+					if (movescript.Forces != null) {
+						var speedx = 0;
+						var speedy = 0;
+						var accelx = 0;
+						var accely = 0;
+						for (var ff=1;ff<=stageframe;ff++) {
+							movescript.Forces.forEach(function(hitbox, index){
+								if (hitbox.TickStart < ff && hitbox.TickEnd >= ff) {
+									if (hitbox.Flag == "HorizontalSpeed") speedx = hitbox.Amount;
+									else if (hitbox.Flag == "HorizontalAcceleration") accelx = hitbox.Amount;
+									else if (hitbox.Flag == "VerticalSpeed") speedy = hitbox.Amount;
+									else if (hitbox.Flag == "VerticalAcceleration") accely = hitbox.Amount;
+								}
+							});
+							movex += speedx;
+							movey += speedy;
+							movey = Math.max(0,movey);
+							speedx += accelx;
+							speedy += accely;
+						}
+					}
+					stageg.attr("transform","translate("+(100+movex*100)+","+(350-movey*100)+")");
+					stagestat.selectAll("*").remove();			
+					stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#999").text(movex.toFixed(4) + ", " + movey.toFixed(4) + " = X, Y");
 					if (statpush != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#990").text((statpush).toFixed(4) + " = PUSH");
 					if (stathurt != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#090").text((stathurt).toFixed(4) + " = HURT");
 					if (stathurtthrow != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#099").text((stathurtthrow).toFixed(4) + " = THROW");
 					if (stathit != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#c33").text((stathit).toFixed(4) + " = HIT");
 					if (statthrow != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#33c").text((statthrow).toFixed(4) + " = THROW");
+					if (movescript.Type1s != null)
+					movescript.Type1s.forEach(function(hitbox, index){
+						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
+							if ((hitbox.Flag1 & 2) == 2) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#963").text("CROUCH");
+							if ((hitbox.Flag1 & 4) == 4) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#099").text("AIR");
+						}
+					});	
 				}
 				//fileol.attr("id","FRAMETABLEOL");//style("width","50em").style("overflow","auto");
 				var scriptlist = fileol.append("li").attr("value",movescript.Index).classed("pre-wrap", true);
@@ -389,6 +419,11 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 				var framerow = framebody.append("tr").attr("id","FRAME-HURT-THROW"); framerow.append("th").text("HURT THROW"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
 				var framerow = framebody.append("tr").attr("id","FRAME-HURT-ARMOR"); framerow.append("th").text("HURT ARMOR"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
 
+				if (movescript.Type1s != null)
+				movescript.Type1s.forEach(function(hitbox, index){
+					if ((hitbox.Flag1 & 2) == 2) frametable.selectAll("#FRAME-IASA td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#fff8dc");
+					if ((hitbox.Flag1 & 4) == 4) frametable.selectAll("#FRAME-IASA td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#eff");
+				});
 				if (movescript.Hitboxes != null)
 				movescript.Hitboxes.forEach(function(hitbox, index){
 					var bgcolor = hitbox.HitType == 4 ? "#eee" : hitbox.HitType == 3 ? "#eee" : hitbox.HitType == 0 ? "#fdd" : hitbox.HitType == 1 ? "#fed" : hitbox.HitType == 2 ? "#ddf" : "";

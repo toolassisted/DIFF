@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>SFV DIFF LOL</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.50, minimum-scale=0.10, maximum-scale=100.0, user-scalable=1">
+	<meta name="viewport" content="width=device-width, initial-scale=0.50, minimum-scale=0.10, maximum-scale=10.0, user-scalable=1">
 	<link rel="stylesheet" type="text/css" href="html.css">
 	<script src="d3.v4.min.js"></script>
 	<script src="jsondiffpatch-full.min.js"></script>
@@ -282,16 +282,24 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 				zoomdiv.append("button").text("1.0").on("click",function(){stagesvg.style("transform","scale(1.0)")});
 				zoomdiv.append("button").text("1.5").on("click",function(){stagesvg.style("transform","scale(1.5)")});
 				zoomdiv.append("button").text("2.0").on("click",function(){stagesvg.style("transform","scale(2.0)")});
+				zoomdiv.append("button").text("STAT").on("click",function(){stagestat.classed("UNOC",!stagestat.classed("UNOC"));});
 				var fileol = FILEDIV.append("ol");
 				var stagelist = fileol.append("li").attr("value",1).classed("pre-wrap", true);
 				var stagediv = stagelist.append("div");//.style("overflow","auto");
-				var stagesvg = stagediv.append("svg").attr("id","STAGESVG").style("background-color","#000").append("g").style("transform-origin","100px 350px").style("transform","scale(1)");
+				var stageroot = stagediv.append("svg").attr("id","STAGESVG").style("background-color","#000");
+				var stagestat = stageroot.append("text").attr("text-anchor","end");
+				var stagesvg = stageroot.append("g").style("transform-origin","100px 350px").style("transform","scale(1)");
 				stagesvg.append("line").attr("x1",100).attr("x2",100).attr("y1",350-0).attr("y2",350+50);
 				stagesvg.append("line").attr("x1",0).attr("x2",2000).attr("y1",350).attr("y2",350);
 				UCHITBOX(1);
 				var stagetext = stagesvg.append("g");
 				stagetext.append("text").attr("x",110).attr("y",400).attr("fill","#999").text("U SCROLL >");
 				function UCHITBOX(stageframe) {
+					var statpush = null;
+					var stathurt = null;
+					var stathurtthrow = null;
+					var stathit = null;
+					var statthrow = null;
 					stagesvg.selectAll("g").remove();
 					var stageg = stagesvg.append("g").attr("transform","translate(100,350)");				
 					stageg.append("line").attr("x1",0).attr("x2",0).attr("y1",-7).attr("y2",+7);
@@ -304,6 +312,9 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 							if (hitbox.HitType == 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HIT", true);
 							if (hitbox.HitType == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROJ", true);
 							if (hitbox.HitType == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("THROW", true);
+							if (hitbox.HitType == 0) stathit = Math.max(stathit, hitbox.X+hitbox.Width);
+							if (hitbox.HitType == 1) stathit = Math.max(stathit, hitbox.X+hitbox.Width);
+							if (hitbox.HitType == 2) statthrow = Math.max(statthrow, hitbox.X+hitbox.Width);
 						}
 					});
 					if (movescript.Hurtboxes != null)
@@ -314,13 +325,15 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 							if ((hitbox.Flag1 & 3) == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-PROJ", true);
 							if ((hitbox.Flag1 & 4) == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-THROW", true);
 							if (hitbox.HitEffect > 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-ARMOR", true);
-							
+							if ((hitbox.Flag1 & 4) == 4) stathurtthrow = Math.max(stathurtthrow, hitbox.X+hitbox.Width);
+							if ((hitbox.Flag1 & 3) != 0) stathurt = Math.max(stathurt, hitbox.X+hitbox.Width);
 						}
 					});
 					if (movescript.PhysicsBoxes != null)
 					movescript.PhysicsBoxes.forEach(function(hitbox, index){
 						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
 							stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PUSH",true);
+							statpush = Math.max(statpush, hitbox.X+hitbox.Width);
 						}
 					});
 					if (movescript.Positions != null) {
@@ -332,6 +345,12 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 						});
 						stageg.attr("transform","translate("+(100+movex*100)+",350)");
 					}
+					stagestat.selectAll("*").remove();
+					if (statpush != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#990").text((statpush).toFixed(4) + " = PUSH");
+					if (stathurt != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#090").text((stathurt).toFixed(4) + " = HURT");
+					if (stathurtthrow != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#099").text((stathurtthrow).toFixed(4) + " = THROW");
+					if (stathit != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#900").text((stathit).toFixed(4) + " = HIT");
+					if (statthrow != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#009").text((statthrow).toFixed(4) + " = THROW");
 				}
 				//fileol.attr("id","FRAMETABLEOL");//style("width","50em").style("overflow","auto");
 				var scriptlist = fileol.append("li").attr("value",movescript.Index).classed("pre-wrap", true);
@@ -467,9 +486,9 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 							if (inputentry.InputParts != null)
 							inputentry.InputParts.forEach(function(input,index){
 								if (entryindex % 2 == 0)
-									fileol.append("li").text(JSON.stringify(input,null,2)).attr("value",index+1).style("background-color","#ffe").style("white-space", "nowrap");	
+									fileol.append("li").text((index+1)+". "+JSON.stringify(input,null,2)).attr("value",entryindex+1).style("background-color","#ffe").style("white-space", "nowrap");
 								else
-									fileol.append("li").text(JSON.stringify(input,null,2)).attr("value",index+1).style("white-space", "nowrap");	
+									fileol.append("li").text((index+1)+". "+JSON.stringify(input,null,2)).attr("value",entryindex+1).style("white-space", "nowrap");	
 							});
 						});
 					}

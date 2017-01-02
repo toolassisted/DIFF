@@ -349,8 +349,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					if (statpush != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#990").text((statpush).toFixed(4) + " = PUSH");
 					if (stathurt != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#090").text((stathurt).toFixed(4) + " = HURT");
 					if (stathurtthrow != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#099").text((stathurtthrow).toFixed(4) + " = THROW");
-					if (stathit != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#900").text((stathit).toFixed(4) + " = HIT");
-					if (statthrow != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#009").text((statthrow).toFixed(4) + " = THROW");
+					if (stathit != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#c33").text((stathit).toFixed(4) + " = HIT");
+					if (statthrow != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#33c").text((statthrow).toFixed(4) + " = THROW");
 				}
 				//fileol.attr("id","FRAMETABLEOL");//style("width","50em").style("overflow","auto");
 				var scriptlist = fileol.append("li").attr("value",movescript.Index).classed("pre-wrap", true);

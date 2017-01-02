@@ -220,6 +220,7 @@
 <div><a href="https://twitter.com/arlieth/status/810015951890554880"><img src="TWITTER.PNG" /></a></div>
 </main>
 <script type="text/javascript">
+if (!Element.prototype.scrollIntoViewIfNeeded) Element.prototype.scrollIntoViewIfNeeded = Element.prototype.scrollIntoView;
 var STAGESCALE = 1;
 var HASH = { NAME: null, INDEX: null, CLICK: false };
 var CHARFILE = [
@@ -237,7 +238,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 	var HASHNAME = HASH.NAME; HASH.NAME = null;
 	var HASHINDEX = HASH.INDEX; HASH.INDEX = null;
 	if (cfi>=CHARBAC.length) return;
-	if (!HASHCLICK) UCHASH(charfile);
+	if (!HASHCLICK) { MECHASH(false); HASHNAME = HASH.NAME; HASH.NAME = null; HASHINDEX = HASH.INDEX; HASH.INDEX = null; HASHCLICK = false; HASH.CLICK = false; UCHASH(charfile); }
 	d3.selectAll(".DIFF2").classed("DIFF2",false);
 	d3.select(this).classed("DIFF2",true);
 	d3.select("#SCRIPT").classed("fold", false);
@@ -256,13 +257,13 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 			var charfileul = SCRIPTBOX.append("ul").attr("id","CHARFILE");
 			var bcmol = charfileul.append("li").text(CHARBCM[cfi]).append("ol");
 			var bacol = charfileul.append("li").text(CHARBAC[cfi]).append("ol");;
-			bcmol.append("li").text("MOVES").attr("value",data2.Moves.length).on("click",function(d){ d3.select("#MOVE0").node().scrollIntoView(); });
-			bcmol.append("li").text("CHARGES").attr("value",data2.Charges.length).on("click",function(d){ d3.select("#CHARGE0").node().scrollIntoView(); });
-			bcmol.append("li").text("INPUTS").attr("value",data2.Inputs.length).on("click",function(d){ d3.select("#INPUT0").node().scrollIntoView(); });
-			bcmol.append("li").text("CANCEL LISTS").attr("value",data2.CancelLists.length).on("click",function(d){ d3.select("#CANCEL0").node().scrollIntoView(); });
-			bacol.append("li").text("HITBOX EFFECTS").attr("value",data1.HitboxEffectses.length).on("click",function(d){ d3.select("#EFFECT0").node().scrollIntoView(); });
-			bacol.append("li").text("SCRIPTS").attr("value",data1.MoveLists[0].Moves.length).on("click",function(d){ d3.select("#SCRIPT0").node().scrollIntoView(); });
-			if (data1.MoveLists.length == 2) bacol.append("li").text("SCRIPTS VT").attr("value",data1.MoveLists[1].Moves.length).on("click",function(d){ d3.select("#SCRIPTVT0").node().scrollIntoView(); });
+			bcmol.append("li").text("MOVES").attr("value",data2.Moves.length).on("click",function(d){ if (data2.Moves.length > 0) d3.select("#MOVE0").node().scrollIntoViewIfNeeded(); });
+			bcmol.append("li").text("CHARGES").attr("value",data2.Charges.length).on("click",function(d){ if (data2.Charges.length > 0) d3.select("#CHARGE0").node().scrollIntoViewIfNeeded(); });
+			bcmol.append("li").text("INPUTS").attr("value",data2.Inputs.length).on("click",function(d){ if (data2.Inputs.length > 0) d3.select("#INPUT0").node().scrollIntoViewIfNeeded(); });
+			bcmol.append("li").text("CANCEL LISTS").attr("value",data2.CancelLists.length).on("click",function(d){ if (data2.CancelLists.length > 0) d3.select("#CANCEL0").node().scrollIntoViewIfNeeded(); });
+			bacol.append("li").text("HITBOX EFFECTS").attr("value",data1.HitboxEffectses.length).on("click",function(d){ if (data1.HitboxEffectses.length > 0) d3.select("#EFFECT0").node().scrollIntoViewIfNeeded(); });
+			bacol.append("li").text("SCRIPTS").attr("value",data1.MoveLists[0].Moves.length).on("click",function(d){ if (data1.MoveLists[0].Moves.length > 0) d3.select("#SCRIPT0").node().scrollIntoViewIfNeeded(); });
+			if (data1.MoveLists.length == 2) bacol.append("li").text("SCRIPTS VT").attr("value",data1.MoveLists[1].Moves.length).on("click",function(d){ if (data1.MoveLists[1].Moves.length > 0) d3.select("#SCRIPTVT0").node().scrollIntoViewIfNeeded(); });
 
 			var DIFFBOX = d3.select("#DIFF");
 			DIFFBOX.selectAll("*").remove();
@@ -669,8 +670,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 			});
 
 			if (HASHNAME != null && HASHINDEX != null) {
-				d3.select("#"+HASHNAME+HASHINDEX).node().scrollIntoView();
-				d3.select("#"+HASHNAME+HASHINDEX).node().click();
+				var HASHNODE = d3.select("#"+HASHNAME+HASHINDEX).node();
+				if (HASHNODE != null) { HASHNODE.scrollIntoViewIfNeeded(); HASHNODE.click(); }
 			}
 			HASHCLICK = false;
 		});
@@ -885,7 +886,7 @@ function UCBAC(data) {
 function UCHASH(h) {
 	window.location.hash = "#" + h.replace(".json","");
 }
-function MECHASH() {
+function MECHASH(MECLICK) {
 	var hash = window.location.hash.substr(1).replace(".json","").split("/");
 	var h = hash[0];
 	var i = CHARBAC.indexOf(h);
@@ -904,7 +905,10 @@ function MECHASH() {
 			HASH.INDEX = hash[2];
 		}
 		HASH.CLICK = true;
-		d3.select("#CHARUL").select("li:nth-child("+(i+1)+")").node().click();
+		if (MECLICK != false) {
+			d3.select("#CHARUL").select("li:nth-child("+(i+1)+")").node().click();
+			d3.select("#CHARUL").select("li:nth-child("+(i+1)+")").node().scrollIntoViewIfNeeded();
+		}
 	}
 }
 MECHASH();

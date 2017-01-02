@@ -220,6 +220,7 @@
 <div><a href="https://twitter.com/arlieth/status/810015951890554880"><img src="TWITTER.PNG" /></a></div>
 </main>
 <script type="text/javascript">
+var STAGESCALE = 1;
 var HASH = { NAME: null, INDEX: null, CLICK: false };
 var CHARFILE = [
 	"ALX_000", "ALX_001", "ALX_002", "ALX_003", "ALX_004", "BLR_000", "BLR_001", "BLR_002", "BLR_003", "BLR_004", "BLR_005", "BRD_000", "BRD_001", "BRD_002", "BRD_003", "BRD_004", "BSN_000", "BSN_001", "BSN_002", "CMN_000", "CMN_001", "CMN_002", "CMY_000", "CMY_001", "CMY_002", "CMY_003", "CMY_004", "CNL_000", "CNL_001", "CNL_002", "CNL_003", "CNL_004", "CNL_005", "DSM_000", "DSM_001", "DSM_002", "DSM_003", "DSM_004", "DSM_005", "FAN_000", "FAN_001", "FAN_002", "FAN_003", "FAN_004", "GUL_000", "GUL_001", "GUL_002", "GUL_003", "IBK_000", "IBK_001", "IBK_002", "JRI_000", "JRI_001", "JRI_002", "KEN_000", "KEN_001", "KEN_002", "KEN_003", "KEN_004", "KEN_005", "KRN_000", "KRN_001", "KRN_002", "KRN_003", "KRN_004", "LAR_000", "LAR_001", "LAR_002", "LAR_003", "LAR_004", "NCL_000", "NCL_001", "NCL_002", "NCL_003", "NCL_004", "NSH_000", "NSH_001", "NSH_002", "NSH_003", "NSH_004", "RMK_000", "RMK_001", "RMK_002", "RMK_003", "RSD_000", "RSD_001", "RSD_002", "RSD_003", "RSD_004", "RYU_000", "RYU_001", "RYU_002", "RYU_003", "RYU_004", "RYU_005", "URN_000", "URN_001", "URN_002", "VEG_000", "VEG_001", "VEG_002", "VEG_003", "VEG_004", "VEG_005", "VEG_006", "Z21_000", "ZGF_000", "ZGF_001", "ZGF_002", "ZGF_003"
@@ -279,16 +280,16 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 				var scriptdiv = FILEDIV.append("div").text("SCRIPT");
 				var zoomdiv = scriptdiv.append("div").style("float","right");
 				zoomdiv.append("span").text("SCALE ");
-				zoomdiv.append("button").text("1.0").on("click",function(){stagesvg.style("transform","scale(1.0)")});
-				zoomdiv.append("button").text("1.5").on("click",function(){stagesvg.style("transform","scale(1.5)")});
-				zoomdiv.append("button").text("2.0").on("click",function(){stagesvg.style("transform","scale(2.0)")});
+				zoomdiv.append("button").text("1.0").on("click",function(){stagesvg.style("transform","scale(1.0)");STAGESCALE=1.0;});
+				zoomdiv.append("button").text("1.5").on("click",function(){stagesvg.style("transform","scale(1.5)");STAGESCALE=1.5;});
+				zoomdiv.append("button").text("2.0").on("click",function(){stagesvg.style("transform","scale(2.0)");STAGESCALE=2.0;});
 				zoomdiv.append("button").text("STAT").on("click",function(){stagestat.classed("UNOC",!stagestat.classed("UNOC"));});
 				var fileol = FILEDIV.append("ol");
 				var stagelist = fileol.append("li").attr("value",1).classed("pre-wrap", true);
 				var stagediv = stagelist.append("div");//.style("overflow","auto");
 				var stageroot = stagediv.append("svg").attr("id","STAGESVG").style("background-color","#000");
 				var stagestat = stageroot.append("text").attr("text-anchor","end");
-				var stagesvg = stageroot.append("g").style("transform-origin","100px 350px").style("transform","scale(1)");
+				var stagesvg = stageroot.append("g").style("transform-origin","100px 350px").style("transform","scale("+STAGESCALE+")");
 				stageroot.append("line").attr("x1",100).attr("x2",100).attr("y1",350-0).attr("y2",350+50);
 				stageroot.append("line").attr("x1",0).attr("x2","98%").attr("y1",350).attr("y2",350);
 				UCHITBOX(1);

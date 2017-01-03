@@ -248,7 +248,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 	d3.selectAll(".DIFF2").classed("DIFF2",false);
 	d3.select(this).classed("DIFF2",true);
 	d3.select("#SCRIPT").classed("fold", false);
-	document.getElementById('DIFF').innerHTML = "<span class=\"DIFF2\">" + CHARBAC[cfi] + "</span> <span class=\"DIFF2\">" + CHARBCM[cfi] + "</span>";
+	// document.getElementById('DIFF').innerHTML = "<span class=\"DIFF2\">" + CHARBAC[cfi] + "</span> <span class=\"DIFF2\">" + CHARBCM[cfi] + "</span>";
 	d3.json("JSON/"+CHARFILE[cfi]+"_BAC.json", function(error1, data1) {
 		d3.json("JSON/"+CHARFILE[cfi]+"_BCM.json", function(error2, data2) {
 			data1["JSON"] = CHARBAC[cfi];
@@ -272,7 +272,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 			if (data1.MoveLists.length == 2) bacol.append("li").text("SCRIPTS VT").attr("value",data1.MoveLists[1].Moves.length).on("click",function(d){ if (data1.MoveLists[1].Moves.length > 0) d3.select("#SCRIPTVT0").node().scrollIntoViewIfNeeded(); });
 
 			var DIFFBOX = d3.select("#DIFF");
-			DIFFBOX.selectAll("*").remove();
+			DIFFBOX.text("").selectAll("*").remove();
 			var DIFFHEAD = DIFFBOX.append("div").text(CHARFILE[cfi]).classed("DIFF2", true);
 			DIFFHEAD.append("button").classed("LAYOUTBUTTON", true).text("| | |").on("click",function(){ d3.select("#JSONDIV").classed("UNOC",false); d3.select("#SCRIPT").classed("UNOC",false); });
 			DIFFHEAD.append("button").classed("LAYOUTBUTTON", true).text("| |").on("click",function(){ d3.select("#JSONDIV").classed("UNOC",true); d3.select("#SCRIPT").classed("UNOC",false); });
@@ -292,31 +292,31 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 				zoomdiv.append("button").text("2.0").on("click",function(){stagesvg.style("transform","scale(2.0)");STAGESCALE=2.0;});
 				zoomdiv.append("button").text("STAT").on("click",function(){stagestat.classed("UNOC",!stagestat.classed("UNOC"));});
 				var fileol = FILEDIV.append("ol");
-				var stagelist = fileol.append("li").attr("value",1).classed("pre-wrap", true);
+				var stagelist = fileol.append("li").attr("value",movescript.TotalTicks).classed("pre-wrap", true);
 				var stagediv = stagelist.append("div");//.style("overflow","auto");
 				var stageroot = stagediv.append("svg").attr("id","STAGESVG").style("background-color","#000");
 				var stagestat = stageroot.append("text").attr("text-anchor","end");
 				var stagesvg = stageroot.append("g").style("transform-origin","100px 350px").style("transform","scale("+STAGESCALE+")");
 				stageroot.append("line").attr("x1",100).attr("x2",100).attr("y1",350-0).attr("y2",350+50);
 				stageroot.append("line").attr("x1",0).attr("x2","98%").attr("y1",350).attr("y2",350);
-				UCHITBOX(1);
+				for(var ff=1;ff<movescript.TotalTicks;ff++) UCHITBOX(ff,false);
 				var stagetext = stagesvg.append("g");
 				stagetext.append("text").attr("x",110).attr("y",400).attr("fill","#999").text("U SCROLL >");
-				function UCHITBOX(stageframe) {
+				function UCHITBOX(stageframe,remove) {
 					var statpush = null;
 					var stathurt = null;
 					var stathurtthrow = null;
 					var stathit = null;
 					var statthrow = null;
-					stagesvg.selectAll("g").remove();
+					if (remove!==false) stagesvg.selectAll("g").remove();
 					var stageg = stagesvg.append("g").attr("transform","translate(100,350)");				
-					stageg.append("line").attr("x1",0).attr("x2",0).attr("y1",-7).attr("y2",+7);
-					stageg.append("line").attr("x1",-7).attr("x2",+7).attr("y1",0).attr("y2",0);
+					if (remove!==false || stageframe==1) stageg.append("line").attr("x1",0).attr("x2",0).attr("y1",-7).attr("y2",+7);
+					if (remove!==false || stageframe==1) stageg.append("line").attr("x1",-7).attr("x2",+7).attr("y1",0).attr("y2",0);
 					if (movescript.Hitboxes != null)
 					movescript.Hitboxes.forEach(function(hitbox, index){
 						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
-							if (hitbox.HitType == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
-							if (hitbox.HitType == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
+							if (remove!==false || stageframe==1) if (hitbox.HitType == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
+							if (remove!==false || stageframe==1) if (hitbox.HitType == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROX", true);
 							if (hitbox.HitType == 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HIT", true);
 							if (hitbox.HitType == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PROJ", true);
 							if (hitbox.HitType == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("THROW", true);
@@ -328,11 +328,11 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					if (movescript.Hurtboxes != null)
 					movescript.Hurtboxes.forEach(function(hitbox, index){
 						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
-							if ((hitbox.Flag1 & 3) == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-HIT", true);
-							if ((hitbox.Flag1 & 3) == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-STRIKE", true);
-							if ((hitbox.Flag1 & 3) == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-PROJ", true);
-							if ((hitbox.Flag1 & 4) == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-THROW", true);
-							if (hitbox.HitEffect > 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-ARMOR", true);
+							if (remove!==false || stageframe==1) if ((hitbox.Flag1 & 3) == 3) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-HIT", true);
+							if (remove!==false || stageframe==1) if ((hitbox.Flag1 & 3) == 1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-STRIKE", true);
+							if (remove!==false || stageframe==1) if ((hitbox.Flag1 & 3) == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-PROJ", true);
+							if (remove!==false || stageframe==1) if ((hitbox.Flag1 & 4) == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-THROW", true);
+							if (remove!==false || stageframe==1) if (hitbox.HitEffect > 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-ARMOR", true);
 							if ((hitbox.Flag1 & 4) == 4) stathurtthrow = Math.max(stathurtthrow, hitbox.X+hitbox.Width);
 							if ((hitbox.Flag1 & 3) != 0) stathurt = Math.max(stathurt, hitbox.X+hitbox.Width);
 						}
@@ -340,7 +340,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					if (movescript.PhysicsBoxes != null)
 					movescript.PhysicsBoxes.forEach(function(hitbox, index){
 						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
-							stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PUSH",true);
+							if (remove!==false || stageframe==1) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("PUSH",true);
 							statpush = Math.max(statpush, hitbox.X+hitbox.Width);
 						}
 					});
@@ -406,8 +406,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 						stageframe = Math.floor(this.scrollLeft / width + 1);
 						if (stageframe < 1) stageframe = 1;
 						if (stageframe > frames) stageframe = frames;
-						if (stageframe == stagelist.attr("value")) return;						
-						stagelist.attr("value", stageframe); // console.log(stageframe); console.log(this.scrollLeft + "/" + start + "/" + end + "/" + width + "/" + frames); 
+						if (stageframe == stagelist.attr("value")) return;
+						stagelist.attr("value", stageframe); // console.log(stageframe); console.log(this.scrollLeft + "/" + start + "/" + end + "/" + width + "/" + frames);
 						UCHITBOX(stageframe);
 					});
 				var frametable = framediv.append("table").attr("id","FRAMETABLE").style("padding-right","95%");

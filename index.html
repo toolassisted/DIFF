@@ -286,6 +286,21 @@
 		span.D5 {
 			color: #999;
 		}
+		tr.HITBOX-PROX td {
+			background-color: #ddd;
+		}
+		tr.HITBOX-HIT td {
+			background-color: #fee;
+		}
+		tr.HITBOX-PROJ td {
+			background-color: #fed;
+		}
+		tr.HITBOX-THROW td {
+			background-color: #eef;
+		}
+		tr.HITBOX-LOL td {
+			background-color: #fdf;
+		}
 	</style>
 </head>
 <body>
@@ -807,13 +822,16 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 			});
 
 
+			var hitboxlist = [];
 			var hitboxes = {};
 			var hitboxesall = {};
-			data1.MoveLists.forEach(function(ML){
+			data1.MoveLists.forEach(function(ML,mli){
 				ML.Moves.forEach(function(move, index) {
 					if (move == null) return;
 					if (move.Hitboxes == null) return;
+					var scriptid = (mli == 1 ? "VT":"") + index;
 					move.Hitboxes.forEach(function(hitbox, index){
+						hitboxlist.push({scriptid:scriptid,script:move,hitbox:hitbox,index:index});
 						if (hitboxes[hitbox.HitboxEffectIndex] == null) {
 							hitboxes[hitbox.HitboxEffectIndex] = move.Name;
 							hitboxesall[hitbox.HitboxEffectIndex] = move.Name;
@@ -881,7 +899,6 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 						UCSCRIPT(d, fileol);
 					});
 			});
-
 
 
 			cfol.append("li").attr("id","MOVEINPUT").text("MOVE INPUT").attr("value",data2.Moves.length).on("click",function(d){
@@ -988,12 +1005,69 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 						motionindextd.text("["+d.InputMotionIndex+"]"+inputstring);
 					}
 
+					// if ((d.InputFlags & 0x30)==0x00) // no button
+					// if ((d.InputFlags & 0x30)==0x10) // any button
+					// if ((d.InputFlags & 0x30)==0x20) // all button
+					// if ((d.InputFlags & 0x30)==0x30) // two button
+					// if ((d.InputFlags & 0x3)==0x0) // no direction
+					// if ((d.InputFlags & 0x3)==0x1) // any direction
+					// if ((d.InputFlags & 0x3)==0x2) // only direction
+					// if ((d.InputFlags & 0x3)==0x3) // any direction
 					graphtext += "M" + PAD3(d.Index) + " [label=\"" + d.Name + "\\n" + inputstring.trim() + " " + "\"]\n";
 
 				});
 			
 				filegraph.text(graphtext);
 
+			});
+
+			cfol.append("li").attr("id","HITBOXLIST").text("HITBOX LIST").attr("value",hitboxlist.length).on("click",function(d){
+				if (!HASHCLICK) UCHASH(charfile + "/HITBOX/LIST");
+				SCRIPTBOX.selectAll("li.DIFF2").classed("DIFF2",false);
+				d3.select(this).classed("DIFF2",true);
+				FILEDIV.selectAll("*").remove();
+				FILEDIV.append("div").text("HITBOX LIST");
+				var filetable = FILEDIV.append("table").classed("MOVEINPUTTABLE",true).style("text-align","center");
+				var thead = ["#","ID","SCRIPT","#", "TickStart","TickEnd","X","Y","Z","Width","Height","Unk1","Unk2","Unk3","Unk4","Unk5","Unk6","Unk7","Unk8","Hits","Type","Juggle Limit","Juggle Increase","Flag4","Effect","Unk10","Unk11"];
+				filetable.append("thead").append("tr").selectAll("td").data(thead).enter().append("td").text(function(d){return d;})
+				filetable.append("tbody").selectAll("tr").data(hitboxlist).enter().append("tr").each(function(d,i){
+					var movescript = d.script;
+					var hitbox = d.hitbox;
+					var filerow = d3.select(this);
+					if (hitbox.HitType == 3) filerow.classed("HITBOX-PROX",true);
+					else if (hitbox.HitType == 4) filerow.classed("HITBOX-PROX",true);
+					else if (hitbox.HitType == 0) filerow.classed("HITBOX-HIT",true);
+					else if (hitbox.HitType == 1) filerow.classed("HITBOX-PROJ",true);
+					else if (hitbox.HitType == 2) filerow.classed("HITBOX-THROW",true);
+					else filerow.classed("HITBOX-LOL",true);
+					filerow.append("td").text((i+1) + ".").style("color","#999");
+					filerow.append("td").text(d.scriptid);
+					filerow.append("td").text(movescript.Name);
+					filerow.append("td").text(d.index).style("color","#999");
+					filerow.append("td").text(hitbox.TickStart);
+					filerow.append("td").text(hitbox.TickEnd);
+					filerow.append("td").text(hitbox.X).style("color","#933");
+					filerow.append("td").text(hitbox.Y).style("color","#393");
+					filerow.append("td").text(hitbox.Z).style("color","#339");
+					filerow.append("td").text(hitbox.Width).style("color","#933");
+					filerow.append("td").text(hitbox.Height).style("color","#393");
+					filerow.append("td").text(hitbox.Unknown1.toString(16)).style("color","#999");
+					filerow.append("td").text(hitbox.Unknown2.toString(16)).style("color","#999");
+					filerow.append("td").text(hitbox.Unknown3.toString(16)).style("color","#999");
+					filerow.append("td").text(hitbox.Unknown4.toString(16)).style("color","#999");
+					filerow.append("td").text(hitbox.Unknown5.toString(16)).style("color","#999");
+					filerow.append("td").text(hitbox.Unknown6.toString(16)).style("color","#999");
+					filerow.append("td").text(hitbox.Unknown7.toString(16)).style("color","#999");
+					filerow.append("td").text(hitbox.Unknown8.toString(16)).style("color","#999");
+					filerow.append("td").text(hitbox.NumberOfHits.toString(16)).style("color","#933");
+					filerow.append("td").text(hitbox.HitType);
+					filerow.append("td").text(hitbox.JuggleLimit).style("color","#339");
+					filerow.append("td").text(hitbox.JuggleIncrease).style("color","#339");
+					filerow.append("td").text(hitbox.Flag4);
+					filerow.append("td").text(hitbox.HitboxEffectIndex);
+					filerow.append("td").text(hitbox.Unknown10);
+					filerow.append("td").text(hitbox.Unknown11);
+				});
 			});
 
 			if (HASHNAME != null && HASHINDEX != null) {

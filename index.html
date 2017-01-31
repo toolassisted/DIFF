@@ -947,6 +947,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					cancelset.each(function(list){
 						cancellist += "[" + list + "] ";
 						graphtext += "M" + PAD3(d.Index) + " -> CL" + PAD3(list) + "\n";
+						if (data2.CancelLists[list].Cancels != null)
 						data2.CancelLists[list].Cancels.forEach(function(cancel){
 							cancellist += cancel.Index + ". ";
 							graphtext += "CL" + PAD3(list) + " -> M" + PAD3(cancel.Index) + "\n";

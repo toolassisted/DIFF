@@ -477,7 +477,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 						}
 					}
 					stageg.attr("transform","translate("+(100+movex*100)+","+(350-movey*100)+")");
-					stagestat.selectAll("*").remove();			
+					if (remove!==false || stageframe==1) {
+					stagestat.selectAll("*").remove();
 					stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#999").text(movex.toFixed(10) + ", " + movey.toFixed(4) + " = X, Y");
 					if (statpush != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#990").text((statpush).toFixed(4) + " = PUSH");
 					if (stathurt != null) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#090").text((stathurt).toFixed(4) + " = HURT");
@@ -490,7 +491,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 							if ((hitbox.Flag1 & 2) == 2) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#963").text("CROUCH");
 							if ((hitbox.Flag1 & 4) == 4) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#099").text("AIR");
 						}
-					});	
+					});
+					}
 				}
 				//fileol.attr("id","FRAMETABLEOL");//style("width","50em").style("overflow","auto");
 				var scriptlist = fileol.append("li").attr("value",movescript.Index).classed("pre-wrap", true);

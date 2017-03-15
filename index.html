@@ -780,7 +780,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					d3.select(this).classed("DIFF2",true);
 					FILEDIV.selectAll("*").remove();
 
-					FILEDIV.append("div").text("HITBOX EFFECT");
+					FILEDIV.append("div").text("EFF HITBOX EFFECT");
 					var fileol = FILEDIV.append("ol");
 					var effectdiv = fileol.append("li").attr("value",d.Index).append("div").style("display","flex").classed("pre-wrap", true);
 					effectdiv.append("div").style("flex","0 0 auto").text(JSON.stringify({HIT_STAND:d.HIT_STAND},null,2)).style("background-color","#fee");
@@ -821,7 +821,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 
 						UCSCRIPTTABLE(d, FILEDIV, mli);
 
-						FILEDIV.append("div").text("SCRIPT");
+						FILEDIV.append("div").text("EFF SCRIPT");
 						var fileol = FILEDIV.append("ol");
 						fileol.append("li").text(JSON.stringify(d,null,2).split("\"AutoCancels\":")[0]).attr("value",d.Index);
 						UCSCRIPT(d, fileol);
@@ -860,8 +860,6 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 			});			
 
 			var autocancellist = [];
-			var hitboxes = {};
-			var hitboxesall = {};
 			data1.MoveLists.forEach(function(ML,mli){
 				ML.Moves.forEach(function(move, index) {
 					if (move == null) return;
@@ -931,6 +929,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					});
 			});
 
+			// if (data4 != null) // NOFD
 
 
 			cfol.append("li").attr("id","MOVEINPUT").text("MOVE INPUT").attr("value",data2.Moves.length).on("click",function(d){

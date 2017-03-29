@@ -512,6 +512,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 						if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
 							if ((hitbox.Flag1 & 2) == 2) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#963").text("CROUCH");
 							if ((hitbox.Flag1 & 4) == 4) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#099").text("AIR");
+							if ((hitbox.Flag1 & 32) == 32) stagestat.append("tspan").attr("x","98%").attr("dy","1.5em").style("fill","#900").text("CH");
 						}
 					});	
 					}
@@ -540,7 +541,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 				var framehead = frametable.append("thead").append("tr").style("color","#ccc");
 				var framebody = frametable.append("tbody").style("color","#999");
 				// framehead.append("th").text("FRAME"); framehead.selectAll("td").data(d3.range(1,ticks+1)).enter().append("td").text(function(d){return d;});//.style("width","1.5em");
-				var framerow = framebody.append("tr").attr("id","FRAME-IASA"); framerow.append("th").text("IASA"); framerow.selectAll("td").data(d3.range(1,ticks+1)).enter().append("td").text(function(d){return d;}); frametable.selectAll("#FRAME-IASA td").data(d3.range(IASA+1,ticks+1), function(d){return d;}).style("color", "#eee");
+				var framerow = framebody.append("tr").attr("id","FRAME-IASA"); framerow.append("th").text("IASA"); framerow.selectAll("td").data(d3.range(1,ticks+1)).enter().append("td").text(function(d){return d;}); frametable.selectAll("#FRAME-
+				").data(d3.range(IASA+1,ticks+1), function(d){return d;}).style("color", "#eee");
 				var framerow = framebody.append("tr").attr("id","FRAME-PROX"); framerow.append("th").text("PROXIMITY"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
 				var framerow = framebody.append("tr").attr("id","FRAME-HIT"); framerow.append("th").text("HIT"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});					
 				var framerow = framebody.append("tr").attr("id","FRAME-PROJ"); framerow.append("th").text("PROJ"); framerow.selectAll("td").data(d3.range(1,ticks+1), function(d){ return d;}).enter().append("td").text(function(d){return d;});
@@ -555,6 +557,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 				movescript.Type1s.forEach(function(hitbox, index){
 					if ((hitbox.Flag1 & 2) == 2) frametable.selectAll("#FRAME-IASA td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#fff8dc");
 					if ((hitbox.Flag1 & 4) == 4) frametable.selectAll("#FRAME-IASA td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#eff");
+					if ((hitbox.Flag1 & 32) == 32) frametable.selectAll("#FRAME-PROX td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("color","#c00");
 				});
 				if (movescript.Hitboxes != null)
 				movescript.Hitboxes.forEach(function(hitbox, index){

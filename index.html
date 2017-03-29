@@ -576,7 +576,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					if ((hitbox.Flag1 & 2) == 2) frametable.selectAll("#FRAME-HURT-PROJ td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#fed");
 					if ((hitbox.Flag1 & 4) == 4) frametable.selectAll("#FRAME-HURT-THROW td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#dff");
 					if (hitbox.HitEffect > 0) frametable.selectAll("#FRAME-HURT-ARMOR td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#fef").text(hitbox.HitEffect);
-					if ((hitbox.Unknown6 & 4) == 4) frametable.selectAll("#FRAME-HURT-HIT td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("color","#3cc");
+					if ((hitbox.Flag1 & 1) == 1 && (hitbox.Unknown6 & 4) == 4) frametable.selectAll("#FRAME-HURT-HIT td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("color","#3cc");
+					if ((hitbox.Flag1 & 4) == 4 && (hitbox.Unknown6 & 4) == 4) frametable.selectAll("#FRAME-HURT-THROW td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("color","#3cc");
 
 				});
 				if (movescript.Cancels != null)

@@ -224,6 +224,13 @@
 			vector-effect: non-scaling-stroke;
 			mix-blend-mode: screen;
 		}
+		rect.HURT-INV-AIR {
+			stroke-width: 3px;
+			stroke: #066;
+			fill: none;
+			vector-effect: non-scaling-stroke;
+			mix-blend-mode: screen;
+		}
 		.UCSAME {
 			color: #ccc;
 		}
@@ -447,6 +454,7 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 							if (remove!==false || stageframe==1) if ((hitbox.Flag1 & 3) == 2) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-PROJ", true);
 							if (remove!==false || stageframe==1) if ((hitbox.Flag1 & 4) == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-THROW", true);
 							if (remove!==false || stageframe==1) if (hitbox.HitEffect > 0) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).classed("HURT-ARMOR", true);
+							if (remove!==false || stageframe==1) if ((hitbox.Unknown6 & 4) == 4) stageg.append("rect").attr("x",hitbox.X*100).attr("y",-hitbox.Y*100-hitbox.Height*100).attr("width",hitbox.Width*100).attr("height",hitbox.Height*100).attr("stroke-dasharray",10).classed("HURT-INV-AIR", true);
 							if ((hitbox.Flag1 & 4) == 4) stathurtthrow = Math.max(stathurtthrow, hitbox.X+hitbox.Width);
 							if ((hitbox.Flag1 & 3) != 0) stathurt = Math.max(stathurt, hitbox.X+hitbox.Width);
 						}
@@ -568,6 +576,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					if ((hitbox.Flag1 & 2) == 2) frametable.selectAll("#FRAME-HURT-PROJ td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#fed");
 					if ((hitbox.Flag1 & 4) == 4) frametable.selectAll("#FRAME-HURT-THROW td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#dff");
 					if (hitbox.HitEffect > 0) frametable.selectAll("#FRAME-HURT-ARMOR td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("background-color","#fef").text(hitbox.HitEffect);
+					if ((hitbox.Unknown6 & 4) == 4) frametable.selectAll("#FRAME-HURT-HIT td").data(d3.range(hitbox.TickStart+1,hitbox.TickEnd+1), function(d){return d;}).style("color","#3cc");
+
 				});
 				if (movescript.Cancels != null)
 				movescript.Cancels.forEach(function(cancel, index){

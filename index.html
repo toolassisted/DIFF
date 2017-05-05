@@ -536,6 +536,16 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 						if (stageframe == stagelist.attr("value")) return;
 						stagelist.attr("value", stageframe); // console.log(stageframe); console.log(this.scrollLeft + "/" + start + "/" + end + "/" + width + "/" + frames);
 						UCHITBOX(stageframe);
+					}).on("mousewheel", function(){
+						if (d3.event.deltaY != 0) {
+							var iasarow = d3.select("#FRAME-IASA");
+							var start = iasarow.select("td").node().offsetLeft;
+							var end = iasarow.select("td:last-child").node().offsetLeft;
+							var frames = iasarow.selectAll("td").size();
+							var width = (end - start) / (frames-1);
+							this.scrollLeft += d3.event.deltaY > 0 ? width : -width;
+							d3.event.preventDefault();
+						}
 					});
 				var frametable = framediv.append("table").attr("id","FRAMETABLE").style("padding-right","95%");
 				var framehead = frametable.append("thead").append("tr").style("color","#ccc");

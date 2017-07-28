@@ -1137,23 +1137,9 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					inputstring.replace("LPMPHP","PPP");
 					inputstring.replace("LKMKHK","KKK");
 
-					graphtext += "M" + PAD3(d.Index) + " [label=\"" + d.Name + "\\n" + inputstring.trim() + " " + "\"]\n";
-					jsonline = '{ "name":"'+d.Index+'. '+d.Name+' -> '+d.ScriptIndex+' '+movescript.Name+'"';
-					jsonline += Array(Math.max(0,65-jsonline.length)).join(' ');
-					if (d.VtriggerRequirement > 0) jsonline += ', "p1x":-2.0    , "p2x":2.0    , "vt0":1   , "status_vr":'+d.VtriggerRequirement;
-					else jsonline += ', "p1x":-2.0    , "p2x":2.0    , "vt0":1   , "status_vt":0';
-					jsonline += Array(Math.max(0,133-jsonline.length)).join(' ');
-					jsonline += ', "status_ex":'+d.MeterRequirement;
-					jsonline += Array(Math.max(0,154-jsonline.length)).join(' ');
-					jsonline += ', "p1combo":"'+inputstring.trim()+'"';
-					jsonline += Array(Math.max(0,203-jsonline.length)).join(' ');
-					jsonline += ', "tool":0, "blk":0,  "hit":0,  "blkkd":0,  "chkd":0,  "kd":0, "note":"" }, // , "inputs":" '+DEC2BIN(d.Input)+' '+DEC2BIN(d.InputFlags)+' "   , "cancels":" '+incancellist+cancellist.replace(/<br>/g,"")+'\n';
-					jsontext += jsonline;
 
 				});
 			
-				filegraph.text(graphtext);
-				filejson.text(jsontext);
 
 			});
 

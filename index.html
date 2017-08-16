@@ -474,8 +474,8 @@ d3.select("#JSONDIV").append("ul").attr("id","CHARUL").selectAll("li").data(CHAR
 					if (movescript.Positions != null) {
 						movescript.Positions.forEach(function(hitbox, index){
 							if (hitbox.TickStart < stageframe && hitbox.TickEnd >= stageframe) {
-								if (hitbox.Flag == 32768) movex += hitbox.Movement;
-								if (hitbox.Flag == 65536) movey += hitbox.Movement;
+								if ((hitbox.Flag & 32768) == 32768) movex += hitbox.Movement;
+								if ((hitbox.Flag & 65535) == 65536) movey += hitbox.Movement;
 							}
 						});
 					}
